@@ -27,6 +27,8 @@ public class Main {
         sll.traversalInSinglyLinkedList();
         sll.deleteFromLinkedList(0);
         sll.traversalInSinglyLinkedList();
+        sll.deleteSinglyLinkedList();
+        sll.deleteFromLinkedList(0);
     }
     
 }

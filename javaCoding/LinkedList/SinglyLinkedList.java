@@ -128,4 +128,11 @@ public class SinglyLinkedList {
             size--;
         }
     }
+    //delete linkedlist
+
+    public void deleteSinglyLinkedList(){
+        head = null;
+        tail = null;
+        System.out.println("Successfully delted the Linked list!");
+    }
 }
