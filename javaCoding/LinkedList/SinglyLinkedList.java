@@ -77,5 +77,17 @@ public class SinglyLinkedList {
         
         
     }
+
+    //search method
+    public boolean searchInSinglyLinkedList(int nodeValue){
+    
+        Node temp = head;
+        while(temp.next!=null){
+            if(temp.value == nodeValue)
+            return true;
+            temp = temp.next;
+        }
+        return false;
+    }
     
 }

@@ -18,6 +18,7 @@ public class Main {
         // System.out.println(sll.head.next.next.next.value);
         // System.out.println(sll.head.next.next.next.next.value);
         sll.traversalInSinglyLinkedList();
+        System.out.println("Does linked list contains the value? "+sll.searchInSinglyLinkedList(8));
        
     }
     
