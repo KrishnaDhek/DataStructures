@@ -56,5 +56,26 @@ public class SinglyLinkedList {
         }
         size++;
     }
+    //traversal method
+    public void traversalInSinglyLinkedList(){
+        if(head==null){
+            System.out.println("Singly linked list does not contain any element! ");
+            
+        }
+
+        Node temp = head;
+        int i=0;
+        while(temp!=null){
+            System.out.print(temp.value);
+            temp = temp.next;
+           if(i!=size-1)
+            System.out.print("->"); 
+            i++;
+        
+        }
+        System.out.println(" ");
+        
+        
+    }
     
 }
