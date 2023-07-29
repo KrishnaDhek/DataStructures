@@ -19,7 +19,14 @@ public class Main {
         // System.out.println(sll.head.next.next.next.next.value);
         sll.traversalInSinglyLinkedList();
         System.out.println("Does linked list contains the value? "+sll.searchInSinglyLinkedList(8));
-       
+        // sll.deleteFromLinkedList(0);
+        // sll.traversalInSinglyLinkedList();
+        sll.deleteFromLinkedList(3);
+        sll.traversalInSinglyLinkedList();
+        sll.deleteFromLinkedList(4);
+        sll.traversalInSinglyLinkedList();
+        sll.deleteFromLinkedList(0);
+        sll.traversalInSinglyLinkedList();
     }
     
 }
