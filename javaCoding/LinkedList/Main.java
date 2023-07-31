@@ -97,6 +97,7 @@ public class Main {
     // System.out.println(cdll.head.next.next.next.next.value);
     cdll.traversalInCircularDoublyLinkedList();
     cdll.reverseTraversalInCircularDoublyLinkedList();
+    System.out.println(cdll.search(200));
     cdll.deleteFromCircularDoublyLinkedList(0);
     cdll.deleteFromCircularDoublyLinkedList(3);
     cdll.traversalInCircularDoublyLinkedList();

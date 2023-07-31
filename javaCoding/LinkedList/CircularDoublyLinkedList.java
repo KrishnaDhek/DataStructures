@@ -94,6 +94,18 @@ public class CircularDoublyLinkedList {
             System.out.println("\n");
         }
      }
+     //search method
+     public boolean search(int nodeValue){
+        DoublyNode temp = head;
+        while(temp.next!=head){
+            if(temp.value==nodeValue){
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+
+     }
 
      //delete node
      public void deleteFromCircularDoublyLinkedList(int location){
@@ -144,6 +156,7 @@ public class CircularDoublyLinkedList {
         }
 
      }
+     
     
     
 }
