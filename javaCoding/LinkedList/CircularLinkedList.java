@@ -65,22 +65,24 @@ public class CircularLinkedList {
 
     public void traverseCircularLinkedList(){
         if(head==null){
-            System.out.println("Circular Singly Linked List is Empty!");
+            System.out.println("Circular list does not exist");
+            return;
         }
-
-        Node temp = head;
-        int i =0;
-      
-        do{
-            System.out.print(temp.value);
-            if(i!=size-1)
-            System.out.print("->");
+        else{
+             Node temp = head;
+            for(int i=0;i<size; i++){
+                System.out.print(temp.value);
+        
+             if(i!= size-1){
+             System.out.print("->");
+           }
             temp = temp.next;
-            i++;
-        }while(temp!=head);
-        System.out.println("");  
-       }
 
+            }
+
+        }
+        System.out.println("\n");
+    }
        //search method
        public boolean searchInCircularSinglyLinkedList(int nodeValue){
        Node temp = head;
@@ -90,7 +92,58 @@ public class CircularLinkedList {
         temp = temp.next;
        }while(temp!=head);
        return false;
-       }
+    }
+    public void deleteCircularList(int location){
+        if(head==null){
+            System.out.println("Circular does not exist");
+            return;
+        }
+        else if(location==0){
+            head = head.next;
+            tail.next = head;
+            size--;
+
+            if(size==0){
+                tail = null;
+                head.next =null;
+                head = null;
+            }
+
+        }
+        else if(location>=size){
+            Node temp = head;
+            int index =0;
+
+            for(int i =0; i<size-1;i++){
+                temp = temp.next;
+            }
+            if(temp == head){
+                head.next = null;
+                tail = head = null;
+               size--;
+                return;
+
+            }
+            temp.next = head;
+            tail = temp;
+            size--;
+        }
+        else{
+            Node temp = head;
+            for(int i=0; i<location-1; i++){
+                temp =temp.next;
+            }
+            temp.next = temp.next.next;
+            size--;
+        }
+    }
+
+    //delete entire
+    public void delete(){
+        head =null;
+        tail =null;
+        System.out.println("Successfully deleted circular linked list");
+    }
 }
 
 
