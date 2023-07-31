@@ -96,6 +96,7 @@ public class Main {
     // System.out.println(cdll.head.next.next.next.value); 
     // System.out.println(cdll.head.next.next.next.next.value);
     cdll.traversalInCircularDoublyLinkedList();
+    cdll.reverseTraversalInCircularDoublyLinkedList();
 }
     
 }
