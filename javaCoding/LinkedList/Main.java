@@ -31,8 +31,21 @@ public class Main {
         // sll.deleteFromLinkedList(0);
 
         CircularLinkedList cll = new CircularLinkedList();
-        cll.createCircularSinglyLinkedList(1);
+        // cll.createCircularSinglyLinkedList(1);
+        // System.out.println(cll.head.value);
+        cll.insertInCircularSinglyLinkedList(1, 0);
+        cll.insertInCircularSinglyLinkedList(2, 1);
+        cll.insertInCircularSinglyLinkedList(3, 2);
+        cll.insertInCircularSinglyLinkedList(4, 3);
+        cll.insertInCircularSinglyLinkedList(5, 2);
+        cll.insertInCircularSinglyLinkedList(6, 1);
         System.out.println(cll.head.value);
+        System.out.println(cll.head.next.value);
+        System.out.println(cll.head.next.next.value);
+        System.out.println(cll.head.next.next.next.value);
+        System.out.println(cll.head.next.next.next.next.value);
+        System.out.println(cll.head.next.next.next.next.next.value);
+
     }
     
 }
