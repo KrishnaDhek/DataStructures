@@ -67,6 +67,7 @@ public class Main {
     //     System.out.println(dll.head.next.next.next.value);
     //     System.out.println(dll.head.next.next.next.next.value);
          dll.traverseDoublyLinkedList();   
+         dll.reverseTraversalInDoublyLinkedList();
 
 }
     

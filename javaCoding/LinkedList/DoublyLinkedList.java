@@ -65,7 +65,7 @@ public class DoublyLinkedList {
             for(int i =0; i<size; i++){
                 System.out.print(temp.value);
                 if(i!=size-1){
-                    System.out.print("<->" );
+                    System.out.print("->" );
                 }
                 temp = temp.next;
             }
@@ -73,6 +73,24 @@ public class DoublyLinkedList {
 
         }
     }
+    //reverse traversal
 
+    public void reverseTraversalInDoublyLinkedList(){
+        if(head==null){
+            System.out.println("DoublyLinked List is Empty!");
+        }
+
+        else{
+            DoublyNode temp = tail;
+            for(int i =0; i<size;i++){
+                System.out.print(temp.value);
+
+                if(i!=size-1)
+                System.out.print("<-");
+                temp = temp.previous;
+            }
+            System.out.println(" ");
+        }
+    }
     
 }
