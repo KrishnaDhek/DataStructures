@@ -53,5 +53,26 @@ public class DoublyLinkedList {
         size++;
 
     }
+    //traverse method
+
+    public void traverseDoublyLinkedList(){
+        if(head == null){
+            System.out.println("Doubly Linked List is Empty!");
+        }
+
+        else{
+            DoublyNode temp = head;
+            for(int i =0; i<size; i++){
+                System.out.print(temp.value);
+                if(i!=size-1){
+                    System.out.print("<->" );
+                }
+                temp = temp.next;
+            }
+            System.out.println(" ");
+
+        }
+    }
+
     
 }
