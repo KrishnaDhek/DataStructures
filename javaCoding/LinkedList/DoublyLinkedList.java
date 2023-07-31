@@ -154,4 +154,17 @@ public class DoublyLinkedList {
             size--;
         }
     }
+    //delete DoublyLinkedList
+
+    public void delete(){
+        DoublyNode temp =head;
+        while(temp!=null){
+            temp.previous = null;
+            temp = temp.next;
+        }
+        head = null;
+        tail=null;
+        size--;
+        System.out.println("Successfully delted doubly linked list!");
+    }
 }

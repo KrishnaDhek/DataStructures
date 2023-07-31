@@ -78,6 +78,8 @@ public class Main {
         dll.traverseDoublyLinkedList();
         dll.deleteFromDoublyLinkedList(4);
         dll.traverseDoublyLinkedList();
+        dll.delete();
+        dll.traverseDoublyLinkedList();
         
        
 }
