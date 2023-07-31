@@ -39,12 +39,13 @@ public class Main {
         cll.insertInCircularSinglyLinkedList(4, 3);
         cll.insertInCircularSinglyLinkedList(5, 2);
         cll.insertInCircularSinglyLinkedList(6, 1);
-        System.out.println(cll.head.value);
-        System.out.println(cll.head.next.value);
-        System.out.println(cll.head.next.next.value);
-        System.out.println(cll.head.next.next.next.value);
-        System.out.println(cll.head.next.next.next.next.value);
-        System.out.println(cll.head.next.next.next.next.next.value);
+        // System.out.println(cll.head.value);
+        // System.out.println(cll.head.next.value);
+        // System.out.println(cll.head.next.next.value);
+        // System.out.println(cll.head.next.next.next.value);
+        // System.out.println(cll.head.next.next.next.next.value);
+        // System.out.println(cll.head.next.next.next.next.next.value);
+        cll.traverseCircularLinkedList();
 
     }
     
