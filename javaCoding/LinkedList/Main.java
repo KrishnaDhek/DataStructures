@@ -74,6 +74,12 @@ public class Main {
         dll.insertInDoublyLinkedList(9, 1);
         dll.traverseDoublyLinkedList();
         System.out.println(dll.searchInDoublyLinkedList(8));
+        dll.deleteFromDoublyLinkedList(7);
+        dll.traverseDoublyLinkedList();
+        dll.deleteFromDoublyLinkedList(4);
+        dll.traverseDoublyLinkedList();
+        
+       
 }
     
 }

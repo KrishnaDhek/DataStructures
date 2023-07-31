@@ -79,7 +79,7 @@ public class DoublyLinkedList {
         if(head==null){
             System.out.println("DoublyLinked List is Empty!");
         }
-
+     
         else{
             DoublyNode temp = tail;
             for(int i =0; i<size;i++){
@@ -102,5 +102,56 @@ public class DoublyLinkedList {
             temp = temp.next;
         }
         return false;
+    }
+    
+    //delete method
+    public void deleteFromDoublyLinkedList(int location){
+        if(head==null){
+            System.out.println("DoublyLinkedList does not contain any element nothing to delete");
+        }
+        else if(location==0){
+            
+
+            if (size==1){
+                head = null;
+                tail = null;
+                size--;
+                return;
+            }
+            else{
+                head =head.next; 
+                head.previous = null;
+                size--;
+            }
+            
+        }
+        else if(location>=size){
+            
+            
+            if(size==1){
+                head =null;
+                tail=null;
+                size--;
+                return;
+            }
+            else{
+                tail = tail.previous;
+                tail.next = null;
+                size--;
+            }
+        }
+
+        else{
+            DoublyNode temp = head;
+            int index = 0;
+            while(index<location-1){
+                temp = temp.next;
+                index++;
+            }
+
+            temp.next = temp.next.next;
+            temp.next.previous = temp;
+            size--;
+        }
     }
 }
