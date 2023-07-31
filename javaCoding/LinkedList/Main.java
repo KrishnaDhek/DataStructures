@@ -56,9 +56,16 @@ public class Main {
         // cll.traverseCircularLinkedList();
 
         DoublyLinkedList dll = new DoublyLinkedList();
-        dll.creDoublyLinkedList(1);
+        dll.insertInDoublyLinkedList(1, 0);
+        dll.insertInDoublyLinkedList(2, 1);
+        dll.insertInDoublyLinkedList(3, 2);
+        dll.insertInDoublyLinkedList(4, 3);
+        dll.insertInDoublyLinkedList(5, 4);
         System.out.println(dll.head.value);
-
+        System.out.println(dll.head.next.value);
+        System.out.println(dll.head.next.next.value);
+        System.out.println(dll.head.next.next.next.value);
+        System.out.println(dll.head.next.next.next.next.value);
     }
     
 }
