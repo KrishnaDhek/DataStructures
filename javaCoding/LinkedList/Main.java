@@ -101,6 +101,7 @@ public class Main {
     cdll.deleteFromCircularDoublyLinkedList(0);
     cdll.deleteFromCircularDoublyLinkedList(3);
     cdll.traversalInCircularDoublyLinkedList();
+    cdll.delete();
 }
     
 }

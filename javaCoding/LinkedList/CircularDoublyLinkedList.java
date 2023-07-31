@@ -156,6 +156,19 @@ public class CircularDoublyLinkedList {
         }
 
      }
+     //delete CircularDoublyLinkedList
+
+     public void delete(){
+        DoublyNode temp= head;
+        while(temp!=null){
+            temp.next=null;
+            temp = temp.next;
+        }
+        head = null;
+        tail = null;
+        size--;
+        System.out.println("Successfully deleted CircularDoublyLinkedList!");
+     }
      
     
     
