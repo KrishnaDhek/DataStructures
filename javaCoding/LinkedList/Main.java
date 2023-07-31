@@ -46,6 +46,8 @@ public class Main {
         // System.out.println(cll.head.next.next.next.next.value);
         // System.out.println(cll.head.next.next.next.next.next.value);
         cll.traverseCircularLinkedList();
+        System.out.println("Is the value present ? "+cll.searchInCircularSinglyLinkedList(3));
+        
 
     }
     

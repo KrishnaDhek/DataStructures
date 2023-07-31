@@ -78,9 +78,18 @@ public class CircularLinkedList {
             temp = temp.next;
             i++;
         }while(temp!=head);
-        System.out.println("");
-       
-        
+        System.out.println("");  
+       }
+
+       //search method
+       public boolean searchInCircularSinglyLinkedList(int nodeValue){
+       Node temp = head;
+      do{
+        if(temp.value == nodeValue)
+        return true;
+        temp = temp.next;
+       }while(temp!=head);
+       return false;
        }
 }
 
