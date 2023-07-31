@@ -53,6 +53,16 @@ public class Stack {
     }
     //peek method
 
-    
-    
+    public int Peek(){
+        if(isEmpty()){
+            System.out.println("stack is empty!");
+            return -1;
+        }
+        else{
+            int value  = arrStack[topOfStack];
+            return value;
+        }
+    }
+
+   
 }
