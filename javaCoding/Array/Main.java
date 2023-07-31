@@ -13,7 +13,7 @@ public class Main {
     s.Push(9);//stack is full
     System.out.println("Popped element is :"+s.Pop());
     System.out.println("Peek element is :"+s.Peek());
-    
+    s.delete();
    }
     
 }

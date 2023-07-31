@@ -64,5 +64,9 @@ public class Stack {
         }
     }
 
-   
+    //delete stack
+    public void delete(){
+        arrStack =null;
+        System.out.println("Successfully deleted the stack!");
+    }
 }
