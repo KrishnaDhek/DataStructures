@@ -68,7 +68,12 @@ public class Main {
     //     System.out.println(dll.head.next.next.next.next.value);
          dll.traverseDoublyLinkedList();   
          dll.reverseTraversalInDoublyLinkedList();
-
+        System.out.println(dll.searchInDoublyLinkedList(8));
+        System.out.println(dll.searchInDoublyLinkedList(4));
+        dll.insertInDoublyLinkedList(8, 0);
+        dll.insertInDoublyLinkedList(9, 1);
+        dll.traverseDoublyLinkedList();
+        System.out.println(dll.searchInDoublyLinkedList(8));
 }
     
 }

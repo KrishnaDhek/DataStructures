@@ -93,4 +93,14 @@ public class DoublyLinkedList {
         }
     }
     
+    //search method 
+    public boolean searchInDoublyLinkedList(int nodeValue){
+        DoublyNode temp = head;
+        while(temp!=null){
+            if(temp.value ==nodeValue)
+            return true;
+            temp = temp.next;
+        }
+        return false;
+    }
 }
