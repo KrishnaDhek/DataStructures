@@ -94,6 +94,56 @@ public class CircularDoublyLinkedList {
             System.out.println("\n");
         }
      }
+
+     //delete node
+     public void deleteFromCircularDoublyLinkedList(int location){
+        DoublyNode temp = head;
+        if(head==null){
+            System.out.println("Circular Doubly Linked List is Empty!");
+            return;
+        }
+        else if(location==0){
+           if(size==1){
+            head.next =null;
+            head.previous = null;
+            tail =null;
+            size--;
+           }
+           else{
+            head = head.next;
+            head.previous = tail;
+            tail.next = head;
+            size--;
+           }
+        }
+        else if(location>=size){
+            if(size==1){
+                head.next=null;
+                head.previous=null;
+                head=null;
+                tail=null;
+                size--;
+            }
+            else{
+                tail = tail.previous;
+                tail.next=head;
+                head.previous=tail;
+                size--;
+            }
+        }
+        else{
+            DoublyNode tmep =head;
+            for(int i=0;i<location-1;i++){
+                temp = temp.next;
+
+            }
+            temp.next = temp.next.next;
+            temp.next.previous = temp;
+            size--;
+
+        }
+
+     }
     
     
 }
