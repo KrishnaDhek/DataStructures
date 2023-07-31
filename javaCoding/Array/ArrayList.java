@@ -1,4 +1,4 @@
-package javaCoding.Array;
+package Array;
 
 import java.util.List;
 
