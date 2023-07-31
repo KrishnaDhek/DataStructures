@@ -55,33 +55,47 @@ public class Main {
         // cll.delete();
         // cll.traverseCircularLinkedList();
 
-        DoublyLinkedList dll = new DoublyLinkedList();
-        dll.insertInDoublyLinkedList(1, 0);
-        dll.insertInDoublyLinkedList(2, 1);
-        dll.insertInDoublyLinkedList(3, 2);
-        dll.insertInDoublyLinkedList(4, 3);
-        dll.insertInDoublyLinkedList(5, 4);
-    //     System.out.println(dll.head.value);
-    //     System.out.println(dll.head.next.value);
-    //     System.out.println(dll.head.next.next.value);
-    //     System.out.println(dll.head.next.next.next.value);
-    //     System.out.println(dll.head.next.next.next.next.value);
-         dll.traverseDoublyLinkedList();   
-         dll.reverseTraversalInDoublyLinkedList();
-        System.out.println(dll.searchInDoublyLinkedList(8));
-        System.out.println(dll.searchInDoublyLinkedList(4));
-        dll.insertInDoublyLinkedList(8, 0);
-        dll.insertInDoublyLinkedList(9, 1);
-        dll.traverseDoublyLinkedList();
-        System.out.println(dll.searchInDoublyLinkedList(8));
-        dll.deleteFromDoublyLinkedList(7);
-        dll.traverseDoublyLinkedList();
-        dll.deleteFromDoublyLinkedList(4);
-        dll.traverseDoublyLinkedList();
-        dll.delete();
-        dll.traverseDoublyLinkedList();
+    //     DoublyLinkedList dll = new DoublyLinkedList();
+    //     dll.insertInDoublyLinkedList(1, 0);
+    //     dll.insertInDoublyLinkedList(2, 1);
+    //     dll.insertInDoublyLinkedList(3, 2);
+    //     dll.insertInDoublyLinkedList(4, 3);
+    //     dll.insertInDoublyLinkedList(5, 4);
+    // //     System.out.println(dll.head.value);
+    // //     System.out.println(dll.head.next.value);
+    // //     System.out.println(dll.head.next.next.value);
+    // //     System.out.println(dll.head.next.next.next.value);
+    // //     System.out.println(dll.head.next.next.next.next.value);
+    //      dll.traverseDoublyLinkedList();   
+    //      dll.reverseTraversalInDoublyLinkedList();
+    //     System.out.println(dll.searchInDoublyLinkedList(8));
+    //     System.out.println(dll.searchInDoublyLinkedList(4));
+    //     dll.insertInDoublyLinkedList(8, 0);
+    //     dll.insertInDoublyLinkedList(9, 1);
+    //     dll.traverseDoublyLinkedList();
+    //     System.out.println(dll.searchInDoublyLinkedList(8));
+    //     dll.deleteFromDoublyLinkedList(7);
+    //     dll.traverseDoublyLinkedList();
+    //     dll.deleteFromDoublyLinkedList(4);
+    //     dll.traverseDoublyLinkedList();
+    //     dll.delete();
+    //     dll.traverseDoublyLinkedList();
         
-       
+
+    CircularDoublyLinkedList cdll = new CircularDoublyLinkedList();
+    // cdll.createCirculaDoublyLinkedList(1);
+    // System.out.println(cdll.head.value);
+    cdll.insertInCircularDoublyLinkedList(10, 0);
+    cdll.insertInCircularDoublyLinkedList(20, 1);
+    cdll.insertInCircularDoublyLinkedList(30, 2);
+    cdll.insertInCircularDoublyLinkedList(40, 3);
+    cdll.insertInCircularDoublyLinkedList(50, 1);
+    // System.out.println(cdll.head.value);
+    // System.out.println(cdll.head.next.value);
+    // System.out.println(cdll.head.next.next.value);
+    // System.out.println(cdll.head.next.next.next.value); 
+    // System.out.println(cdll.head.next.next.next.next.value);
+    cdll.traversalInCircularDoublyLinkedList();
 }
     
 }
