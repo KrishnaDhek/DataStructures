@@ -30,30 +30,34 @@ public class Main {
         // sll.deleteSinglyLinkedList();
         // sll.deleteFromLinkedList(0);
 
-        CircularLinkedList cll = new CircularLinkedList();
-        // cll.createCircularSinglyLinkedList(1);
-        // System.out.println(cll.head.value);
-        cll.insertInCircularSinglyLinkedList(1, 0);
-        cll.insertInCircularSinglyLinkedList(2, 1);
-        cll.insertInCircularSinglyLinkedList(3, 2);
-        cll.insertInCircularSinglyLinkedList(4, 3);
-        cll.insertInCircularSinglyLinkedList(5, 2);
-        cll.insertInCircularSinglyLinkedList(6, 1);
-        // System.out.println(cll.head.value);
-        // System.out.println(cll.head.next.value);
-        // System.out.println(cll.head.next.next.value);
-        // System.out.println(cll.head.next.next.next.value);
-        // System.out.println(cll.head.next.next.next.next.value);
-        // System.out.println(cll.head.next.next.next.next.next.value);
-        cll.traverseCircularLinkedList();
-        System.out.println("Is the value present ? "+cll.searchInCircularSinglyLinkedList(3));
-        cll.traverseCircularLinkedList();
-        cll.deleteCircularList(0);
-        cll.traverseCircularLinkedList();
-        cll.deleteCircularList(1);
-        cll.traverseCircularLinkedList();
-        cll.delete();
-        cll.traverseCircularLinkedList();
+        // CircularLinkedList cll = new CircularLinkedList();
+        // // cll.createCircularSinglyLinkedList(1);
+        // // System.out.println(cll.head.value);
+        // cll.insertInCircularSinglyLinkedList(1, 0);
+        // cll.insertInCircularSinglyLinkedList(2, 1);
+        // cll.insertInCircularSinglyLinkedList(3, 2);
+        // cll.insertInCircularSinglyLinkedList(4, 3);
+        // cll.insertInCircularSinglyLinkedList(5, 2);
+        // cll.insertInCircularSinglyLinkedList(6, 1);
+        // // System.out.println(cll.head.value);
+        // // System.out.println(cll.head.next.value);
+        // // System.out.println(cll.head.next.next.value);
+        // // System.out.println(cll.head.next.next.next.value);
+        // // System.out.println(cll.head.next.next.next.next.value);
+        // // System.out.println(cll.head.next.next.next.next.next.value);
+        // cll.traverseCircularLinkedList();
+        // System.out.println("Is the value present ? "+cll.searchInCircularSinglyLinkedList(3));
+        // cll.traverseCircularLinkedList();
+        // cll.deleteCircularList(0);
+        // cll.traverseCircularLinkedList();
+        // cll.deleteCircularList(1);
+        // cll.traverseCircularLinkedList();
+        // cll.delete();
+        // cll.traverseCircularLinkedList();
+
+        DoublyLinkedList dll = new DoublyLinkedList();
+        dll.creDoublyLinkedList(1);
+        System.out.println(dll.head.value);
 
     }
     
