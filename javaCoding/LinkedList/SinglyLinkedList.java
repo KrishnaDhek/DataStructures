@@ -6,7 +6,7 @@ public class SinglyLinkedList {
     public int size;
 
     public Node createSinglyLinkedList(int nodeValue){
-        head = new Node();
+        // head = new Node();
         Node node  = new Node();
         node.next = null;
         node.value = nodeValue;
