@@ -32,4 +32,14 @@ public class BinaryTreeUsingLinkedList {
         
     }
 
+    //Inorder Traversal :Visit and print left subtree, then root node and then right subtree
+    void InorderTraversal(BinaryNode node){
+        if(node==null){
+            return;
+        }
+        InorderTraversal(node.left);
+        System.out.print(node.value+" ");
+        InorderTraversal(node.right);
+    }
+
 }

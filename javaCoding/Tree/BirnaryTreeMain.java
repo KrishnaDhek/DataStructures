@@ -36,6 +36,9 @@ public class BirnaryTreeMain {
         System.out.println("\n");
         System.out.println("Post-Order Traversal of Binary Tree :");
         binaryTree.PostOrderTraversal(binaryTree.root);
+        System.out.println("\n");
+        System.out.println("In-Order Traversal of Binary Tree :");
+        binaryTree.InorderTraversal(binaryTree.root);
 
     }
     
