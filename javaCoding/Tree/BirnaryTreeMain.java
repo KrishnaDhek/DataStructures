@@ -31,8 +31,11 @@ public class BirnaryTreeMain {
         N4.left =N8;
         N4.right =N9;
         binaryTree.root =N1;
+        System.out.println("Pre-Order Traversal of Binary Tree :");
         binaryTree.PreOrderTraversal(binaryTree.root);
-
+        System.out.println("\n");
+        System.out.println("Post-Order Traversal of Binary Tree :");
+        binaryTree.PostOrderTraversal(binaryTree.root);
 
     }
     
