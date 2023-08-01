@@ -1,5 +1,6 @@
 package Tree;
-
+import java.util.Queue;
+import java.util.LinkedList;
 public class BinaryTreeUsingLinkedList {
     
     BinaryNode root;
@@ -42,4 +43,19 @@ public class BinaryTreeUsingLinkedList {
         InorderTraversal(node.right);
     }
 
+    //LevelOrder Traversal
+    void LevelOrderTraversal(){
+        Queue<BinaryNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            BinaryNode currentNode = queue.remove();
+            System.out.print(currentNode.value+" ");
+            if(currentNode.left!=null){
+                queue.add(currentNode.left);
+            }
+            if(currentNode.right!=null){
+                queue.add(currentNode.right);
+            }
+        }
+    }
 }

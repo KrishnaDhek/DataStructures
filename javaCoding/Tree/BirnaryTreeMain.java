@@ -1,5 +1,6 @@
 package Tree;
 
+
 public class BirnaryTreeMain {
     public static void main(String[] args) {
         BinaryTreeUsingLinkedList binaryTree = new BinaryTreeUsingLinkedList();
@@ -39,6 +40,9 @@ public class BirnaryTreeMain {
         System.out.println("\n");
         System.out.println("In-Order Traversal of Binary Tree :");
         binaryTree.InorderTraversal(binaryTree.root);
+        System.out.println("\n");
+        System.out.println("Level-Order Traversal of Binary Tree :");
+        binaryTree.LevelOrderTraversal();
 
     }
     
