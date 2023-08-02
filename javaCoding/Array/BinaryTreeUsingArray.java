@@ -52,4 +52,14 @@ public class BinaryTreeUsingArray {
     postOrderTraversal(index*2 +1);
     System.out.print(arr[index]+ " ");
    }
+
+   //inOrederTraversal method
+   public void inOrederTraversal(int index){
+    if(index>lastUsedIndex){
+        return;
+    }
+    inOrederTraversal(index*2);
+    System.out.print(arr[index] +" ");
+    inOrederTraversal(index*2+1);
+   }
 }
