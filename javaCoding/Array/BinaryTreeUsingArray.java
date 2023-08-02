@@ -74,11 +74,26 @@ public class BinaryTreeUsingArray {
    public int searchForNode(int value){
     for(int i=1; i<lastUsedIndex; i++){
         if(arr[i]==value){
-            System.out.println("Node "+value+" is present in the Binary Tree");
-            return 1;
+            System.out.println("Node "+value+" is present in the Binary Tree at location "+i);
+            return i;
         }    
     }
     System.out.println("Node "+value+" is not present in the Binary Tree");
     return -1;
+   }
+   
+
+   //deleteNode method
+   public void deleteNode(int value){
+    int location = searchForNode(value);
+
+    if(location==-1){
+        return;
+    }
+    else {
+        arr[location] = arr[lastUsedIndex];
+        lastUsedIndex--;
+        System.out.println("Node "+value+" is successfully deleted");
+    }
    }
 }

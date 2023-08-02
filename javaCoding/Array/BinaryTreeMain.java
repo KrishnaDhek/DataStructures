@@ -24,6 +24,9 @@ public class BinaryTreeMain {
     tree.levelOrderTraversal();
     System.out.println();
     tree.searchForNode(6);
+    tree.deleteNode(3);
+    tree.levelOrderTraversal();
+    System.out.println();
 
 
     
