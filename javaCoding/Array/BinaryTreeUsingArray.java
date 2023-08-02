@@ -62,4 +62,12 @@ public class BinaryTreeUsingArray {
     System.out.print(arr[index] +" ");
     inOrederTraversal(index*2+1);
    }
+
+   //levelOrderTraversal method
+   public void levelOrderTraversal(int index){
+    for(int i =1; i<=lastUsedIndex; i++){
+        System.out.print(arr[i]+" ");
+    }
+    
+   }
 }

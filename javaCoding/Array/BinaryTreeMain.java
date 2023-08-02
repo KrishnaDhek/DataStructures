@@ -14,12 +14,16 @@ public class BinaryTreeMain {
     System.out.println("PreOrder Traversal :");
     tree.preOrderTraversal(1);
     System.out.println();
-     System.out.println("PostOrder Traversal :");
+    System.out.println("PostOrder Traversal :");
     tree.postOrderTraversal(1);
     System.out.println();
-     System.out.println("InOrder Traversal :");
+    System.out.println("InOrder Traversal :");
     tree.inOrederTraversal(1);
     System.out.println();
+     System.out.println("LevelOrder Traversal :");
+    tree.levelOrderTraversal(1);
+    System.out.println();
+
 
     
 
