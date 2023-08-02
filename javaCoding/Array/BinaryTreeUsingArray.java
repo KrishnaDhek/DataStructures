@@ -9,5 +9,39 @@ public class BinaryTreeUsingArray {
     lastUsedIndex =0;
     System.out.println("A blank Binary Tree is created with size = "+size);
    }
+
+   //check ifFull
+
+   public boolean isFull(){
+    if(arr.length-1 == lastUsedIndex){
+        return true;
+    }
+    return false;
+   }
     
+
+   //insert in Binary Tree
+
+   public void insertInBinaryTree(int value){
+    if(!isFull()){
+        arr[lastUsedIndex+1] = value;
+        lastUsedIndex++;
+        System.out.println("Successfully inserted value"); 
+    }
+    else{
+        System.out.println("Binary Tree is full!");
+    }
+   }
+
+   //preOrderTraversal method 
+   public void preOrderTraversal(int index){
+    if(index>lastUsedIndex){
+        return;
+    }
+    System.out.print(arr[index]+ " " );
+    preOrderTraversal(index*2);
+    preOrderTraversal(index*2 +1);
+   }
+
+   
 }
