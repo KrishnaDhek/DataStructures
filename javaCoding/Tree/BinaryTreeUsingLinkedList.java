@@ -166,4 +166,30 @@ public class BinaryTreeUsingLinkedList {
         }
        }
     }
+
+    //DeleteGivenNode method
+    public void DeleteGivenNode(String value){
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            BinaryNode node = queue.remove();
+            if(node.value==value){
+                node.value = getDeepesBinaryNode().value;
+                deleteDeepestNode();
+                System.out.println("Node "+value+" is deleted");
+                return;
+            }
+            else{
+                if(node.left!=null){
+                    queue.add(node.left);
+                }
+                if(node.right!=null){
+                    queue.add(node.right);
+
+                }
+
+            }   
+        }
+        System.out.println("Node "+value+" does not exists in Binary Tree");
+    }
 }

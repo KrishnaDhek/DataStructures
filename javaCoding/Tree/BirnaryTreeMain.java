@@ -33,6 +33,15 @@ public class BirnaryTreeMain {
          System.out.println(binaryTree.getDeepesBinaryNode().value);
         binaryTree.deleteDeepestNode();
         binaryTree.LevelOrderTraversal();
+        System.out.println("\n");
+        binaryTree.DeleteGivenNode("N12");
+        binaryTree.LevelOrderTraversal();
+        System.out.println("\n");
+        binaryTree.DeleteGivenNode("N7");
+        binaryTree.LevelOrderTraversal();
+        System.out.println("\n");
+        binaryTree.DeleteGivenNode("N4");
+        binaryTree.LevelOrderTraversal();
         
         
 
