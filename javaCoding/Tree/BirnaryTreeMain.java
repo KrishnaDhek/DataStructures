@@ -43,6 +43,8 @@ public class BirnaryTreeMain {
         System.out.println("\n");
         System.out.println("Level-Order Traversal of Binary Tree :");
         binaryTree.LevelOrderTraversal();
+        System.out.println("\n");
+        binaryTree.Search("N5");
 
     }
     

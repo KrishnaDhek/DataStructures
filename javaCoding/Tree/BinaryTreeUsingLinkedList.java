@@ -58,4 +58,27 @@ public class BinaryTreeUsingLinkedList {
             }
         }
     }
+
+    //search method
+    
+    public void Search(String value){
+        //perform level order traversal to find the given value
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            BinaryNode currNode = queue.remove();
+            if(currNode.value == value){
+                System.out.println("The value "+value+" is found in the Binary Tree!");
+                return;
+            }
+            else{
+                if(currNode.left!=null){
+                    queue.add(currNode.left);
+                }
+                if(currNode.right!=null){
+                    queue.add(currNode.right);
+                }
+            }
+        }
+    }
 }
