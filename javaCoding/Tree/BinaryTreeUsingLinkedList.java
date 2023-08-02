@@ -87,30 +87,53 @@ public class BinaryTreeUsingLinkedList {
     public void InsertionInBinaryTree(String value){
         BinaryNode node = new BinaryNode();
         node.value =value;
-
+        //if the tree does not exists 
         if(root==null){
             root = node;
             System.out.println("Inserted a new root node");
             return;
         }
+
+        //if the tree exists, look for vacent place and then insert
+        //Level Order Traversal is used to insert the value in the Binary Tree 
         Queue<BinaryNode> queue= new LinkedList<BinaryNode>();
         queue.add(root);
         while(!queue.isEmpty()){
             BinaryNode currNode = queue.remove();
+            //insert in the left subtree if null
             if(currNode.left==null){
                 currNode.left = node;
                 System.out.println("Successfully Inserted");
                 break;
             }
+            //insert in the right subtree if null
             else if(currNode.right==null){
                 currNode.right =node;
                 System.out.println("Successfully Inserted");
                 break;
             }
+            //if we dont have any vacant place then we are going to add the left and current to the tree
             else{
                 queue.add(currNode.left);
                 queue.add(currNode.right);
             }
         }
+    }
+    //getDeepestNode method
+
+    public BinaryNode getDeepesBinaryNode(){
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        queue.add(root);
+        BinaryNode presentNode = null;
+        while(!queue.isEmpty()){
+            presentNode = queue.remove();
+            if(presentNode.left !=null){
+                queue.add(presentNode.left);
+            }
+            if(presentNode.right!=null){
+                queue.add(presentNode.right);
+            }
+        }
+        return presentNode;
     }
 }
