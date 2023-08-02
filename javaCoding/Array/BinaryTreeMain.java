@@ -21,7 +21,7 @@ public class BinaryTreeMain {
     tree.inOrederTraversal(1);
     System.out.println();
      System.out.println("LevelOrder Traversal :");
-    tree.levelOrderTraversal(1);
+    tree.levelOrderTraversal();
     System.out.println();
 
 
