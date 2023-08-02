@@ -27,6 +27,8 @@ public class BinaryTreeMain {
     tree.deleteNode(3);
     tree.levelOrderTraversal();
     System.out.println();
+    tree.deleteBinaryTree();
+    
 
 
     

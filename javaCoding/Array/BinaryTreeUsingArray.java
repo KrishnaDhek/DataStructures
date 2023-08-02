@@ -96,4 +96,15 @@ public class BinaryTreeUsingArray {
         System.out.println("Node "+value+" is successfully deleted");
     }
    }
+
+   //deleteBinaryTree  method
+   public void deleteBinaryTree(){
+    try {
+        arr = null;
+        System.out.println("Binary Tree has been successfully deleted ");
+    } catch (Exception e) {
+        // TODO: handle exception
+        System.out.println("Error!!");
+    }
+   }
 }
