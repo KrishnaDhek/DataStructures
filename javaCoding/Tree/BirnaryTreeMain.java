@@ -42,6 +42,9 @@ public class BirnaryTreeMain {
         System.out.println("\n");
         binaryTree.DeleteGivenNode("N4");
         binaryTree.LevelOrderTraversal();
+        System.out.println("\n");
+        binaryTree.DeleteBinaryTree();
+        
         
         
 

@@ -192,4 +192,11 @@ public class BinaryTreeUsingLinkedList {
         }
         System.out.println("Node "+value+" does not exists in Binary Tree");
     }
+
+    //DeleteBinaryTree method
+
+    public void DeleteBinaryTree(){
+        root=null;
+        System.out.println("Successfully deleted Binary Tree!");
+    }
 }
