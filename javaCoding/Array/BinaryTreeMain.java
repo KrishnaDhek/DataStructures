@@ -23,6 +23,7 @@ public class BinaryTreeMain {
      System.out.println("LevelOrder Traversal :");
     tree.levelOrderTraversal();
     System.out.println();
+    tree.searchForNode(6);
 
 
     

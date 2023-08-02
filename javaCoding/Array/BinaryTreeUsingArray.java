@@ -68,6 +68,17 @@ public class BinaryTreeUsingArray {
     for(int i =1; i<=lastUsedIndex; i++){
         System.out.print(arr[i]+" ");
     }
-    
+   }
+
+   //searchForNode method
+   public int searchForNode(int value){
+    for(int i=1; i<lastUsedIndex; i++){
+        if(arr[i]==value){
+            System.out.println("Node "+value+" is present in the Binary Tree");
+            return 1;
+        }    
+    }
+    System.out.println("Node "+value+" is not present in the Binary Tree");
+    return -1;
    }
 }
