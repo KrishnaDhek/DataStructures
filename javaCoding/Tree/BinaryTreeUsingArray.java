@@ -1,4 +1,4 @@
-package Array;
+package Tree;
 
 public class BinaryTreeUsingArray {
     int[] arr;
