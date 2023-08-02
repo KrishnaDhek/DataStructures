@@ -141,25 +141,29 @@ public class BinaryTreeUsingLinkedList {
 
     public void deleteDeepestNode(){
         Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
-        queue.add(root);
-        BinaryNode previousNode = null;
-        BinaryNode currentNode = null;
-        while(!queue.isEmpty()){
-            previousNode = currentNode;
-            currentNode = queue.remove();
+       queue.add(root);
 
-            if(currentNode.left == null){
-                previousNode.right = null;
-                return;
-            }
-            else if(currentNode.right == null){
-                currentNode.left = null;
-                return;
-            }
-           
-            queue.add(currentNode.left);
-             queue.add(currentNode.right);
-            
+       BinaryNode getNode  = getDeepesBinaryNode();
+       if(root== getNode){
+        root =null;
+        return;
+       }
+
+       while(!queue.isEmpty()){
+        BinaryNode currNode = queue.remove();
+
+        if(currNode.left==getNode){
+            currNode.left =null;
+            return;
         }
+       else if(currNode.right==getNode){
+            currNode.right =null;
+            return;
+        }
+        else{
+            queue.add(currNode.left);
+            queue.add(currNode.right);
+        }
+       }
     }
 }
