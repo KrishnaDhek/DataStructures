@@ -13,6 +13,9 @@ public class BinaryTreeMain {
     tree.insertInBinaryTree(8);
     tree.preOrderTraversal(1);
     System.out.println();
+    tree.postOrderTraversal(1);
+    System.out.println();
+
     
 
    }

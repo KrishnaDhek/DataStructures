@@ -43,5 +43,13 @@ public class BinaryTreeUsingArray {
     preOrderTraversal(index*2 +1);
    }
 
-   
+   //postOrderTraversal 
+   public void postOrderTraversal(int index){
+    if(index>lastUsedIndex){
+        return;
+    }
+    postOrderTraversal(index*2);
+    postOrderTraversal(index*2 +1);
+    System.out.print(arr[index]+ " ");
+   }
 }
