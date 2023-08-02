@@ -80,5 +80,37 @@ public class BinaryTreeUsingLinkedList {
                 }
             }
         }
+        System.out.println("The value "+value+" is not found in the Binary Tree!");
+    }
+
+    //insertion method
+    public void InsertionInBinaryTree(String value){
+        BinaryNode node = new BinaryNode();
+        node.value =value;
+
+        if(root==null){
+            root = node;
+            System.out.println("Inserted a new root node");
+            return;
+        }
+        Queue<BinaryNode> queue= new LinkedList<BinaryNode>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            BinaryNode currNode = queue.remove();
+            if(currNode.left==null){
+                currNode.left = node;
+                System.out.println("Successfully Inserted");
+                break;
+            }
+            else if(currNode.right==null){
+                currNode.right =node;
+                System.out.println("Successfully Inserted");
+                break;
+            }
+            else{
+                queue.add(currNode.left);
+                queue.add(currNode.right);
+            }
+        }
     }
 }
