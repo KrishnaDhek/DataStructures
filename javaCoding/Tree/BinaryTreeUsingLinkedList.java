@@ -112,7 +112,7 @@ public class BinaryTreeUsingLinkedList {
                 System.out.println("Successfully Inserted");
                 break;
             }
-            //if we dont have any vacant place then we are going to add the left and current to the tree
+            //if we dont have any vacant place then we are going to add the left and right of the tree
             else{
                 queue.add(currNode.left);
                 queue.add(currNode.right);
@@ -135,5 +135,31 @@ public class BinaryTreeUsingLinkedList {
             }
         }
         return presentNode;
+    }
+
+    //deleteDeepestNode method
+
+    public void deleteDeepestNode(){
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        queue.add(root);
+        BinaryNode previousNode = null;
+        BinaryNode currentNode = null;
+        while(!queue.isEmpty()){
+            previousNode = currentNode;
+            currentNode = queue.remove();
+
+            if(currentNode.left == null){
+                previousNode.right = null;
+                return;
+            }
+            else if(currentNode.right == null){
+                currentNode.left = null;
+                return;
+            }
+           
+            queue.add(currentNode.left);
+             queue.add(currentNode.right);
+            
+        }
     }
 }

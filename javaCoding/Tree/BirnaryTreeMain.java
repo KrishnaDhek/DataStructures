@@ -30,7 +30,9 @@ public class BirnaryTreeMain {
         System.out.println("\n");
         binaryTree.Search("N5");
         binaryTree.Search("N12");
-        System.out.println(binaryTree.getDeepesBinaryNode().value);
+         System.out.println(binaryTree.getDeepesBinaryNode().value);
+        binaryTree.deleteDeepestNode();
+        binaryTree.LevelOrderTraversal();
 
     }
     
