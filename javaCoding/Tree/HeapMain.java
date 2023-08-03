@@ -20,6 +20,7 @@ public class HeapMain {
         heap.levelOrderTraversal();
         heap.extractHeadofHeap("MinHeap");
         heap.levelOrderTraversal();
+        heap.deleteHeap();
     }
     
 }
