@@ -9,5 +9,23 @@ public class BinaryHeap {
         this.sizeOfHeap = 0;
         System.out.println("Successfully created binary heap");
     }
+
+    public boolean isEmpty(){
+        if(sizeOfHeap==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
+    public int PeekOfHeap(){
+        if(isEmpty()){
+            System.out.println("Heap is empty");
+            return -1;
+        }
+        else{
+            return arr[1];
+        }
+    }
 }
