@@ -79,4 +79,27 @@ public class BinarySearchTree {
        
        }
     }
+
+    // search method
+
+    BSTNode search(BSTNode node, int value){
+        //if the root is null
+        if(node==null){
+            System.out.println("Vaue "+value+" is not found in BST ");
+            return null;
+        }
+        //if the value to be search is present int the root 
+        else if(node.value ==value){
+            System.out.println("Vaue "+value+" is found in BST");
+            return node;
+        }
+        else if(value<=node.value){ 
+            // recursive call to search value in the left subtree
+            return search(node.left, value);
+        }
+        else{
+            // recursive call to search value in the right subtree
+            return search(node.right, value);
+        }
+    }
 }

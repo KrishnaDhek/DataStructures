@@ -24,6 +24,8 @@ public class BSTMain {
     System.out.println(" ");
     System.out.println("Level-Order Traversal of Binary Search Tree :");
     BST.levelOrderTraversal(BST.root);
+    System.out.println(" ");
+    BST.search(BST.root, 50);
     }
    
     
