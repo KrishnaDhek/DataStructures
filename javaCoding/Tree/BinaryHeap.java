@@ -41,7 +41,7 @@ public class BinaryHeap {
         }
         System.out.println("\n");
     }
-    //heapify method
+    //heapify bottom to top  method
     public void heapifyBottomToTop(int index, String typeOfHeap){
         int parent = index/2;
         if(index<=1){
@@ -63,13 +63,83 @@ public class BinaryHeap {
         }
         heapifyBottomToTop(parent, typeOfHeap);
     }
-    // insert in head
 
+    //heapify top to bottom metho
+    public void heapifyTopToBottom(int index, String typeOfHeap){
+        int left = index*2;
+        int right = index*2+1;
+        int swap;
+        if(sizeOfHeap<left){
+            return;
+        }
+        if(typeOfHeap =="MaxHeap"){
+            if(sizeOfHeap==left){
+                if(arr[index]< arr[left]){
+                    int temp = arr[index];
+                    arr[index] =arr[left];
+                    arr[left] = temp;
+                }
+                return;
+            }
+            else{
+                if(arr[left]>arr[right]){
+                    swap =left;
+                }
+                else{
+                    swap = right;
+                }
+                if(arr[index]<arr[swap]){
+                    int temp = arr[index];
+                    arr[index] = arr[swap];
+                    arr[swap] = temp;
+                }
+            }
+        }
+        else if(typeOfHeap == "MinHeap"){
+            if(sizeOfHeap==left){
+                if(arr[index]>arr[left]){
+                    int temp = arr[index];
+                    arr[index] =arr[left];
+                    arr[left] = temp;
+                }
+                return;
+            }
+            else{
+                if(arr[left]<arr[right]){
+                    swap =left;
+                }
+                else{
+                    swap = right;
+                }
+                if(arr[index]>arr[swap]){
+                    int temp = arr[index];
+                    arr[index] = arr[swap];
+                    arr[swap] = temp;
+                }
+            }
+            heapifyTopToBottom(swap, typeOfHeap);
+        }
+    }
+
+    // insert in head
     public void insertInBinaryHeap(int value, String typeOfHeap){
         arr[sizeOfHeap+1] = value;
         sizeOfHeap++;
         heapifyBottomToTop(sizeOfHeap, typeOfHeap);
         System.out.println("Inserted "+value+" successfully in Heap");
 
+    }
+
+    public int extractHeadofHeap(String typeOfHeap){
+        if(isEmpty()){
+            return -1;
+        }
+        else{
+            int extractedValue = arr[1];
+            arr[1] = arr[sizeOfHeap];
+            sizeOfHeap--;
+            heapifyTopToBottom(1, typeOfHeap);
+            return extractedValue;
+        }
     }
 }

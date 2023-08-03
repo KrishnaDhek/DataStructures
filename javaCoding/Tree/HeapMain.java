@@ -15,7 +15,10 @@ public class HeapMain {
         heap.insertInBinaryHeap(50, "MinHeap");
         heap.insertInBinaryHeap(60, "MinHeap");
         heap.insertInBinaryHeap(1, "MinHeap");
-
+        heap.levelOrderTraversal();
+        heap.extractHeadofHeap("MinHeap");
+        heap.levelOrderTraversal();
+        heap.extractHeadofHeap("MinHeap");
         heap.levelOrderTraversal();
     }
     
