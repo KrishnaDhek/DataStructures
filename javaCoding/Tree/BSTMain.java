@@ -27,7 +27,7 @@ public class BSTMain {
     System.out.println(" ");
     BST.search(BST.root, 50);
     System.out.println(" ");
-    BST.deleteNode(BST.root, 50);
+    BST.deleteNode(BST.root, 90);
     BST.levelOrderTraversal(BST.root);
     }
    

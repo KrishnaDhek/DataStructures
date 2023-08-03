@@ -122,27 +122,32 @@ public class BinarySearchTree {
             return null;
         }
         if(value<root.value){
+            //if value is in the left subtree
             root.left = deleteNode(root.left, value);
         }else if(value>root.value){
+            //if value is in the right sub tree
             root.right = deleteNode(root.right, value);
         }
         else{
+            //if the node has two childrens
             if(root.left !=null && root.right!=null){
                 BSTNode temp = root;
-                BSTNode minForRight = MinimumNode(temp.right);
-                root.value = minForRight.value;
-                root.right = deleteNode(root.right, minForRight.value);
+                BSTNode minForRight = MinimumNode(temp.right);//call to find min element from right subtree
+                root.value = minForRight.value;//update root value with the successor
+                root.right = deleteNode(root.right, minForRight.value);// delete the successor 
             }
-            else if(root.left!=null){
+            else if(root.left!=null){//if node has only one child and has only left child
                 root = root.left;
             }
-            else if(root.right!=null){
+            else if(root.right!=null){//id node has only right child and we want to delete it 
                 root = root.right;
             }
             else{
-                root = null;
+                root = null;//if the node is leaf nodre
             }
         }
         return root;
     }
+
+    
 }
