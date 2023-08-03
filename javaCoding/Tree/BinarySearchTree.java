@@ -31,5 +31,14 @@ public class BinarySearchTree {
        root = insert(root, value);
     }
     
-   
+    //preOrder Taversal method
+
+    public void preOrderTaversal(BSTNode node){
+        if(node == null){
+            return;
+        }
+        System.out.print(node.value +" ");
+        preOrderTaversal(node.left);
+        preOrderTaversal(node.right);
+    }
 }

@@ -13,7 +13,8 @@ public class BSTMain {
     BST.insert(30);
     BST.insert(20);
     BST.insert(10);
-    
+    System.out.println("Pre-Order Traversal of Binary Search Tree :");
+    BST.preOrderTaversal(BST.root);
     }
    
     
