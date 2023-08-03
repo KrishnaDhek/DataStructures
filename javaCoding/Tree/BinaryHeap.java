@@ -28,4 +28,9 @@ public class BinaryHeap {
             return arr[1];
         }
     }
+
+    public int SizeOfHeap(){
+        return sizeOfHeap;
+
+    }
 }
