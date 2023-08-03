@@ -41,4 +41,14 @@ public class BinarySearchTree {
         preOrderTaversal(node.left);
         preOrderTaversal(node.right);
     }
+    
+    //in-Order Traversal method
+    public void inorderTraversal(BSTNode node){
+        if(node==null){
+            return;
+        }
+        inorderTraversal(node.left);
+        System.out.print(node.value+ " ");
+        inorderTraversal(node.right);
+    }
 }

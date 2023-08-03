@@ -15,6 +15,9 @@ public class BSTMain {
     BST.insert(10);
     System.out.println("Pre-Order Traversal of Binary Search Tree :");
     BST.preOrderTaversal(BST.root);
+    System.out.println(" ");
+    System.out.println("In-Order Traversal of Binary Search Tree :");
+    BST.inorderTraversal(BST.root);
     }
    
     
