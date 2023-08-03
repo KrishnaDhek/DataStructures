@@ -1,5 +1,6 @@
 package Tree;
-
+import java.util.Queue;
+import java.util.LinkedList;
 public class BinarySearchTree {
     BSTNode root;
 
@@ -60,5 +61,22 @@ public class BinarySearchTree {
         postOrderTaversal(node.left);
         postOrderTaversal(node.right);
         System.out.print(node.value+" ");
+    }
+
+    // level-Order Traversal
+    public void levelOrderTraversal(BSTNode node){
+       Queue<BSTNode> queue = new LinkedList<BSTNode>();
+       queue.add(root);
+       while(!queue.isEmpty()){
+        BSTNode currNode = queue.remove();
+        System.out.print(currNode.value+" ");
+        if(currNode.left!=null){
+            queue.add(currNode.left);
+        }
+        if(currNode.right!=null){
+            queue.add(currNode.right);
+        }
+       
+       }
     }
 }

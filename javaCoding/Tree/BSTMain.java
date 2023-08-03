@@ -21,6 +21,9 @@ public class BSTMain {
     System.out.println(" ");
     System.out.println("Post-Order Traversal of Binary Search Tree :");
     BST.postOrderTaversal(BST.root);
+    System.out.println(" ");
+    System.out.println("Level-Order Traversal of Binary Search Tree :");
+    BST.levelOrderTraversal(BST.root);
     }
    
     
