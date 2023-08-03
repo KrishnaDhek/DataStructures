@@ -31,6 +31,45 @@ public class BinaryHeap {
 
     public int SizeOfHeap(){
         return sizeOfHeap;
+    }
+
+    // levelOrderTraversal
+
+    public void levelOrderTraversal(){
+        for(int i=1; i<=sizeOfHeap; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println("\n");
+    }
+    //heapify method
+    public void heapifyBottomToTop(int index, String typeOfHeap){
+        int parent = index/2;
+        if(index<=1){
+            return;
+        }
+       if(typeOfHeap == "MinHeap"){
+            if(arr[index]<arr[parent]){
+                int temp = arr[index];
+                arr[index] = arr[parent];
+                arr[parent]= temp;
+            }
+        }
+        else if(typeOfHeap =="MaxHeap"){
+            if(arr[index]>arr[parent]){
+                int temp = arr[index];
+                arr[index] = arr[parent];
+                arr[parent] = temp;
+            }
+        }
+        heapifyBottomToTop(parent, typeOfHeap);
+    }
+    // insert in head
+
+    public void insertInBinaryHeap(int value, String typeOfHeap){
+        arr[sizeOfHeap+1] = value;
+        sizeOfHeap++;
+        heapifyBottomToTop(sizeOfHeap, typeOfHeap);
+        System.out.println("Inserted "+value+" successfully in Heap");
 
     }
 }
