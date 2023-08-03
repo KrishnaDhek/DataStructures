@@ -51,4 +51,14 @@ public class BinarySearchTree {
         System.out.print(node.value+ " ");
         inorderTraversal(node.right);
     }
+
+    //post-Order Traversal
+    public void postOrderTaversal(BSTNode node){
+        if(node==null){
+            return;
+        }
+        postOrderTaversal(node.left);
+        postOrderTaversal(node.right);
+        System.out.print(node.value+" ");
+    }
 }

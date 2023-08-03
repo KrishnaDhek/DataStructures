@@ -18,6 +18,9 @@ public class BSTMain {
     System.out.println(" ");
     System.out.println("In-Order Traversal of Binary Search Tree :");
     BST.inorderTraversal(BST.root);
+    System.out.println(" ");
+    System.out.println("Post-Order Traversal of Binary Search Tree :");
+    BST.postOrderTaversal(BST.root);
     }
    
     
