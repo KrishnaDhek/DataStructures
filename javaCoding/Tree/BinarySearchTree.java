@@ -104,7 +104,6 @@ public class BinarySearchTree {
     }
 
     // find Minimum node
-
     public BSTNode MinimumNode(BSTNode root){
         if(root.left==null){
             return root;
@@ -115,7 +114,6 @@ public class BinarySearchTree {
     }
 
     // delete node
-
     public BSTNode deleteNode(BSTNode root, int value){
         if(root==null){
             System.out.println("Value "+value+ " not found in BST");
