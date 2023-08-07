@@ -18,16 +18,17 @@ public class RotateImage {
         for(int i=0; i<mat.length; i++){
             for(int j =0; j<mat.length/2; j++){
                 int temp = mat[i][j];
-                mat[i][j] = mat[j][mat.length-j-1];
-                mat[j][mat.length-j-1] = temp;
+                mat[i][j] = mat[i][mat.length-j-1];
+                mat[i][mat.length-j-1] = temp;
 
             }
         }
 
     }
     public static void main(String[] args) {
-        int[][] mat ={{1,2,3},{4,5,6},{7,8,9}};
+        int[][] mat ={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16,17}};
         RotateImage(mat);
+        System.out.println(mat.length);
         for(int[] i: mat){
             for(int j : i)
             System.out.print(j+" ");
