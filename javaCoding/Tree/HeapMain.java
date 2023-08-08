@@ -18,7 +18,8 @@ public class HeapMain {
         heap.levelOrderTraversal();
         heap.extractHeadofHeap("MinHeap");
         heap.levelOrderTraversal();
-        heap.extractHeadofHeap("MinHeap");
+        int ans =heap.extractHeadofHeap("MinHeap");
+        System.out.println(ans);
         heap.levelOrderTraversal();
         heap.deleteHeap();
     }
