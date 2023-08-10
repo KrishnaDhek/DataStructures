@@ -1,5 +1,15 @@
 package Trie;
+import java.util.HashMap;
+import java.util.Map;
 
+//declare map
 public class TrieNode {
-    
+  Map<Character,TrieNode> children;
+  boolean endOfString;
+  
+  public TrieNode(){
+    children = new HashMap<>();
+    endOfString = false;
+
+    }
 }
