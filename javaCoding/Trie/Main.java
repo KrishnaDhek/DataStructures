@@ -6,6 +6,8 @@ public class Main {
          trie.insert("API");
          trie.insert("APPI");
          trie.insert("APIS");
+         trie.Search("APP");
+         trie.Search("apis");
 
     }
    
