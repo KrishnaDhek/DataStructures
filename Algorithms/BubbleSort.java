@@ -19,6 +19,7 @@ public class BubbleSort {
 
     }
     public void print(int[] arr){
+        System.out.println("BubbleSort :");
         for(int i: arr){
             System.out.print(i +" ");
         }
