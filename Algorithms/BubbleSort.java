@@ -1,5 +1,8 @@
 package Algorithms;
 // Stable, Inplace
+//TC -O(n^2)
+// use when space is concer
+
 public class BubbleSort {
     public void BubbleSort(int[] arr){
         int len = arr.length;
