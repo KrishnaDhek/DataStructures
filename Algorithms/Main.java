@@ -9,6 +9,9 @@ public class Main {
         SelectionSort selectionSort = new SelectionSort();
         selectionSort.SelectionSort(arr);
         selectionSort.print(arr);
+        InsertionSort insertionSort  = new InsertionSort();
+        insertionSort.InsertionSort(arr);
+        insertionSort.print(arr);
     }
     
 }
