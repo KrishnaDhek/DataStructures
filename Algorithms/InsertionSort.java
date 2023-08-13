@@ -1,5 +1,7 @@
 package Algorithms;
-
+// Stable and InPlace
+// O(N)-best case
+// O(N^2)-avg and worst case
 public class InsertionSort {
     public void InsertionSort(int[] arr){
         for(int  i =1 ; i<arr.length; i++){
