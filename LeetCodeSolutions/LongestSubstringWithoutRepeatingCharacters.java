@@ -30,7 +30,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     }
     public static void main(String[] args) {
-        String s = "mnbvklo";
+        String s = "mmnonbvklo";
         System.out.println(LengthOfLongestSubString(s));
     }
     
