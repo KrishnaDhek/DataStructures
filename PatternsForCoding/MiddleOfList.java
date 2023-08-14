@@ -3,9 +3,6 @@
 // If there are two middle nodes, return the second middle node.
 
 package PatternsForCoding;
-
-
-
 class LinkedList{
     Node head;
     class Node{
@@ -17,18 +14,15 @@ class LinkedList{
         }
 
     }
-
     public Node push(int value){
         Node node = new Node(value);
         node.next =head;
         head = node;
         return head;
     }
-
     public int mid(){
         return this.MidOfList().val;
     }
-
     private Node MidOfList(){
         Node fast = head;
         Node slow = head;
@@ -64,4 +58,4 @@ class Main{
             l.print();
             System.out.println(l.mid());
         }
-    }
+}
