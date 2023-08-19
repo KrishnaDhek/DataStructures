@@ -1,4 +1,8 @@
 package Algorithms;
+// he algorithm is elegant and is based on a simple idea: for every element in the array, 
+// you calculate the maximum of either the current element itself or the current element
+// added to the previous maximum subarray sum.
+
 
 
 public class KadanesAlgo {
