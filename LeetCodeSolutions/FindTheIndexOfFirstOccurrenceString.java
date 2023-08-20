@@ -38,7 +38,7 @@ public class FindTheIndexOfFirstOccurrenceString {
 
     public static void main(String[] args) {
         String hayStack = "leetcode";
-        String needle = "code";
+        String needle = "edoc";
        int ans = FirstIndex(hayStack,needle);
         System.out.println(ans);
     }
