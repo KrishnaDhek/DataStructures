@@ -27,7 +27,7 @@ public class FirstUniqueCharInString {
     }
 
     public static void main(String[] args) {
-        String s = "concurrent";
+        String s = "Krishna";
         int ans  = UniqueChar(s);
         System.out.println(ans);
     }
