@@ -33,7 +33,7 @@ public class ZigZagTraversal{
             int size = queue.size();
 
             for (int i = 0; i < size; i++) {
-                TreeNode currentNode = queue.poll();
+                TreeNode currentNode = queue.remove();
                 if (!zigzag) {
                     levelList.addLast(currentNode.val); // Add to the end for left to right
                 } else {
