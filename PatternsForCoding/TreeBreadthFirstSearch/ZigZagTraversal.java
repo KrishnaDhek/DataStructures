@@ -29,22 +29,22 @@ public class ZigZagTraversal{
         boolean zigzag = false; // false means left to right, true means right to left
 
         while (!queue.isEmpty()) {
-            Deque<Integer> levelList = new LinkedList<>();
+            Deque<Integer> deque = new LinkedList<>();
             int size = queue.size();
 
             for (int i = 0; i < size; i++) {
                 TreeNode currentNode = queue.remove();
                 if (!zigzag) {
-                    levelList.addLast(currentNode.val); // Add to the end for left to right
+                    deque.addLast(currentNode.val); // Add to the end for left to right
                 } else {
-                    levelList.addFirst(currentNode.val); // Add to the front for right to left
+                    deque.addFirst(currentNode.val); // Add to the front for right to left
                 }
 
                 if (currentNode.left != null) queue.offer(currentNode.left);
                 if (currentNode.right != null) queue.offer(currentNode.right);
             }
 
-            result.add(new ArrayList<>(levelList));
+            result.add(new ArrayList<>(deque));
             zigzag = !zigzag; // Switch the direction for the next level
         }
 
