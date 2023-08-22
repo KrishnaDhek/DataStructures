@@ -38,11 +38,11 @@ public class BinaryTreeReverseLevelOrderTraversal {
                 currentLevel.add(currentNode.val);
                 
                 if (currentNode.left != null) {
-                    queue.offer(currentNode.left);
+                    queue.add(currentNode.left);
                 }
                 
                 if (currentNode.right != null) {
-                    queue.offer(currentNode.right);
+                    queue.add(currentNode.right);
                 }
             }
             
