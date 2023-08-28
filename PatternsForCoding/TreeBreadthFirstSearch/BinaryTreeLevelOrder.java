@@ -24,26 +24,26 @@ public class BinaryTreeLevelOrder {
         if(root==null){
             return list;
         }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+       Queue<TreeNode> queue = new LinkedList<>();
+       queue.add(root);
 
-        queue.add(root);
-        while(!queue.isEmpty()){
-            int level = queue.size();
-
-            List<Integer> result = new ArrayList<>();
-            for(int i=0; i<level; i++){
-                if(queue.peek().left!=null){
-                    queue.add(queue.peek().left);
-                }
-                if(queue.peek().right!=null){
-                    queue.add(queue.peek().right);
-                }
-                result.add(queue.remove().val);
+       while(!queue.isEmpty()){
+        List<Integer> level = new ArrayList<>();
+        int l = queue.size();
+        for(int i =0; i<l; i++){
+            TreeNode cNode = queue.remove();
+            level.add(cNode.val);
+            if(cNode.left!=null){
+                queue.add(cNode.left);
             }
-            list.add(result);
-        }
-        return list;
+            if(cNode.right!=null){
+                queue.add(cNode.right);
+            }
 
+        }
+        list.add( level);
+       }
+       return list;
     }
 
     public static void main(String[] args) {
