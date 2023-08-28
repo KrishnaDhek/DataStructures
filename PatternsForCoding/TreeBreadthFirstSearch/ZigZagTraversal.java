@@ -26,7 +26,7 @@ public class ZigZagTraversal{
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        boolean zigzag = false; // false means left to right, true means right to left
+        boolean lefttoright = true; // true means left to right, false means right to left
 
         while (!queue.isEmpty()) {
             Deque<Integer> deque = new LinkedList<>();
@@ -34,7 +34,7 @@ public class ZigZagTraversal{
 
             for (int i = 0; i < size; i++) {
                 TreeNode currentNode = queue.remove();
-                if (!zigzag) {
+                if (lefttoright) {
                     deque.addLast(currentNode.val); // Add to the end for left to right
                 } else {
                     deque.addFirst(currentNode.val); // Add to the front for right to left
@@ -45,15 +45,22 @@ public class ZigZagTraversal{
             }
 
             result.add(new ArrayList<>(deque));
-            zigzag = !zigzag; // Switch the direction for the next level
+            lefttoright = !lefttoright; // Switch the direction for the next level
         }
 
         return result;
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-        
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(4);
+        root.left.left = new TreeNode(5);
+        root.left.right = new TreeNode(6);
+        root.right.left = new TreeNode(7);
+        root.right.right = new TreeNode(8);
+        root.right.left.left = new TreeNode(9);
+        root.right.left.right = new TreeNode(10);        
         List<List<Integer>> result = zigzagLevelOrder(root);
         for (List<Integer> level : result) {
             System.out.println(level);
