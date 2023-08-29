@@ -1,37 +1,39 @@
 package PatternsForCoding.TreeBreadthFirstSearch;
+
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-class TNode{
+class node{
     int data;
-    TNode left;
-   TNode right;
-   TNode(){}
-    TNode(int val){
+    node left;
+   node right;
+   node(){}
+    node(int val){
         this.data =val;
 
     }
-   TNode(int val, TNode left, TNode right){
+   node(int val, node left, node right){
         this.data = val;
         this.left= left;
         this.right = right;
     }
 }
-public class TreeRightView {
-    public static List<Integer> rightView(TNode root){
+public class RightViewOfTree  {
+    public static List<Integer> rightView(node root){
         List<Integer> list = new ArrayList<>();
         if (root==null){
             return  list;
         }
-        Queue<TNode> q = new LinkedList<>();
+        Queue<node> q = new LinkedList<>();
         q.offer(root);
 
         while (!q.isEmpty()){
             int level = q.size();
             for (int i=0; i<level; i++){
-                TNode cNode = q.poll();
+                node cNode = q.poll();
                 if(i==level-1){
                     list.add(cNode.data);
                 }
@@ -47,14 +49,13 @@ public class TreeRightView {
     }
 
     public static void main(String[] args) {
-        TNode treeNode = new TNode(1);
-        treeNode.left = new TNode(2);
-        treeNode.left.right = new TNode(5);
-        treeNode.right = new TNode(3);
-        treeNode.right.right =new TNode(4);
-        treeNode.left.right.left = new TNode(6);
+        node treeNode = new node(1);
+        treeNode.left = new node(2);
+        treeNode.left.right = new node(5);
+        treeNode.right = new node(3);
+        treeNode.right.right =new node(4);
+        treeNode.left.right.left = new node(6);
         List<Integer> list = rightView(treeNode);
-        for(int i: list)
-            System.out.println(i);
+        System.out.println(list);;
     }
 }
