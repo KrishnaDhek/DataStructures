@@ -10,7 +10,7 @@ public class KthSmallestElementInSortedMatrix {
         int low =matrix[0][0];
         int high =matrix[matrix.length-1][matrix.length-1];
         while(low<high){
-            int  mid = (low+high)/2;
+            int  mid = low+(high-low)/2;
             int elementCount = count(matrix,mid);
             if(elementCount<k){
                 low = mid+1;
@@ -22,9 +22,24 @@ public class KthSmallestElementInSortedMatrix {
         return low;
 
     }
+
+    private static int count(int[][] m, int mid){
+        int elementCount = 0;
+        int row = m.length-1;
+        int column = 0;
+
+        while(row>=0&&column<m.length){
+            if(m[row][column]<=mid){
+                elementCount +=row+1;
+                column++;
+            }else
+            row--;
+        }
+        return elementCount;
+    }
     public static void main(String[] args) {
         int[][] matrix ={{1,5,9},{10,11,13},{12,13,15}};
-        int k = 7;
+        int k = 9;
         System.out.println(kthSmallest(matrix, k));
     }
 
