@@ -43,40 +43,40 @@ public class PopulatingNextRightPointerInEachNode {
         return root;
 
     }
-//     public static String print(Pointer root) {
-//     if (root == null) {
-//         return "";
-//     }
+    public static String print(Pointer root) {
+    if (root == null) {
+        return "";
+    }
 
-//     StringBuilder result = new StringBuilder();
-//     Queue<Pointer> queue = new LinkedList<>();
-//     queue.offer(root);
+    StringBuilder result = new StringBuilder();
+    Queue<Pointer> queue = new LinkedList<>();
+    queue.offer(root);
 
-//     while (!queue.isEmpty()) {
-//         int levelSize = queue.size();
+    while (!queue.isEmpty()) {
+        int levelSize = queue.size();
 
-//         for (int i = 0; i < levelSize; i++) {
-//             Pointer currentNode = queue.poll();
+        for (int i = 0; i < levelSize; i++) {
+            Pointer currentNode = queue.poll();
 
-//             result.append(currentNode.data);
-//             result.append(",");
+            result.append(currentNode.data);
+            result.append(",");
 
-//             if (currentNode.left != null) {
-//                 queue.offer(currentNode.left);
-//             }
-//             if (currentNode.right != null) {
-//                 queue.offer(currentNode.right);
-//             }
-//         }
+            if (currentNode.left != null) {
+                queue.offer(currentNode.left);
+            }
+            if (currentNode.right != null) {
+                queue.offer(currentNode.right);
+            }
+        }
 
-//         result.append("#,");
-//     }
+        result.append("#,");
+    }
 
-//     // Remove trailing comma
-//     result.setLength(result.length() - 1);
+    // Remove trailing comma
+    result.setLength(result.length() - 1);
 
-//     return result.toString();
-// }
+    return result.toString();
+}
     public static void main(String[] args) {
         Pointer root = new Pointer(1);
         root.left = new Pointer(2);
@@ -86,7 +86,7 @@ public class PopulatingNextRightPointerInEachNode {
         root.right.left = new Pointer(6);
         root.right.right = new Pointer(7);
         connectPointer(root);
-        // System.out.println(print(root));;
+        System.out.println(print(root));;
 
         
     }
