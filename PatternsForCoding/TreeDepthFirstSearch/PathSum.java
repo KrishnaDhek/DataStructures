@@ -18,7 +18,7 @@ class NodeOfTree{
         this.right = right;
     }
 }
-public class AllPathSum {
+public class PathSum {
     private static List<NodeOfTree> pathList = new ArrayList<>();
     public static boolean hasPathSum(NodeOfTree root, int target){
         if(root==null)
