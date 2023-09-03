@@ -4,10 +4,10 @@ public class ReverseString {
     public static void ReverseString(char[] arr){
         if(arr.length<1)
             return;
-
+        
         int i =0;
         int j = arr.length-1;
-
+        
         while(i<j){
             char temp = arr[i];
             arr[i] =arr[j];
