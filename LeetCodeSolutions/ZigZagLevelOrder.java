@@ -27,10 +27,7 @@ class TreeNode{
 }
 
 public class ZigZagLevelOrder {
-    /**
-     * @param root
-     * @return
-     */
+   
     public static List<List<Integer>> zigZagOrder(TreeNode root){
         List<List<Integer>> result = new ArrayList<>();
         if(root==null){
@@ -40,7 +37,7 @@ public class ZigZagLevelOrder {
         queue.add(root);
         boolean direction = true;
         while(!queue.isEmpty()){
-            Deque<Integer> deque = new java.util.LinkedList<>();
+            Deque<Integer> deque = new LinkedList<>();
             int level = queue.size();
             for(int i =0; i<level; i++){
                 TreeNode cNode = queue.poll();
