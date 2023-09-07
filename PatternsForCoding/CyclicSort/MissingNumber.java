@@ -28,7 +28,7 @@ public class MissingNumber {
        }
     
     public static void main(String[] args) {
-        int[] num = {0,2,5,1,8,9,7,3,4};
+        int[] num = {0,2,5,1,8,9,7,3,4,6};
         System.out.println("Missing number in the array "+missingNum(num));
     }
 }
