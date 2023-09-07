@@ -28,7 +28,7 @@ public class SetMisMatch {
     }
 
     public static void main(String[] args) {
-        int[] nums ={1,5,6,6,2,3,4};
+        int[] nums ={1,5,6,7,7,2,3,4};
         int[] a = SetMisMatch(nums);
         for(int i: a)
 
