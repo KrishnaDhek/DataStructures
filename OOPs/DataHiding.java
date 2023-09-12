@@ -24,6 +24,9 @@ class Rectangle{
         return length*bredth;
     }
    
+    public int parameter(){
+        return (length+bredth)*2;
+    }
 
 
 }
@@ -34,6 +37,7 @@ public class DataHiding {
         rect.setLength(10);
         rect.setBredth(20);
         System.out.println("The area of rectangle is: "+rect.area());
+        System.out.println("Parameter of rectangle :"+rect.parameter());
     }
     
 }
