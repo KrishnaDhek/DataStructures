@@ -5,11 +5,19 @@ class Box{
     private int breadth;
 
     public  Box(){
+        this.length =1;
+        this.breadth =1;
+        this.width =1;
 
+    }
+
+    public int area(){
+        return length*breadth*width;
     }
 }
 public class Constructors {
     public static void main(String[] args) {
-        Rectangle r = new Rectangle();
+        Box box = new Box();
+        System.out.println(box.area());
     }
 }
