@@ -4,20 +4,26 @@ class Box{
     private int width;
     private int breadth;
 
-    public  Box(){
-        this.length =1;
-        this.breadth =1;
-        this.width =1;
+    public Box(){//constructor chaining
+        this(1, 1, 1);//call to parameterized constructor
 
     }
+    public Box(int length, int width, int breadth){
+        this.length = length;
+        this.breadth = breadth;
+        this.width = width;
+    }
+    
 
-    public int area(){
+    public int volume(){
         return length*breadth*width;
     }
 }
 public class Constructors {
     public static void main(String[] args) {
         Box box = new Box();
-        System.out.println(box.area());
+        Box box1 = new Box(10, 20, 12);
+        System.out.println(box.volume());
+        System.out.println(box1.volume());
     }
 }
