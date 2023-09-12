@@ -21,6 +21,10 @@ class stud{
             return 'B';
         }
     }
+
+    public String toString(){
+        return "RollNum :"+roll+"\n"+"Name :"+name+"\n"+"Course :"+course+"\n"+"Total :"+total()+"\n"+"Average :"+avg();
+    }
 }
 public class classStud {
     public static void main(String[] args) {
@@ -31,7 +35,7 @@ public class classStud {
         S.m1 =50;
         S.m2 =49;
         S.m3 =45;
-        System.out.println("Total :"+S.total());
-        System.out.println("Average :"+S.avg());
+    
+        System.out.println("Details :\n"+ S);
     }
 }
