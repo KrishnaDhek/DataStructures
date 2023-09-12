@@ -7,12 +7,18 @@ class Rectangle{
     public int getLength(){
      return length;
     }
+
+    public int getBredth(){
+        return bredth;
+    }
     
     public void setLength(int l){
         length = l;
     }
     
-
+    public void setBredth(int b){
+        bredth = b;
+    }
    
 
 
