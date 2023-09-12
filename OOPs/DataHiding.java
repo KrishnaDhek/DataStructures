@@ -39,7 +39,7 @@ public class DataHiding {
     
     public static void main(String[] args) {
         Rectangle rect = new Rectangle();
-        rect.setLength(0);
+        rect.setLength(10);
         rect.setBredth(20);
         System.out.println("The area of rectangle is: "+rect.area());
         System.out.println("Parameter of rectangle :"+rect.parameter());
