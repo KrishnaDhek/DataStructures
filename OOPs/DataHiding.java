@@ -13,7 +13,12 @@ class Rectangle{
     }
     
     public void setLength(int l){
-        length = l;
+        if(l>0){
+            length = l;
+        }
+        else{
+            System.out.println("++Invalid Length++");
+        }
     }
     
     public void setBredth(int b){
@@ -34,7 +39,7 @@ public class DataHiding {
     
     public static void main(String[] args) {
         Rectangle rect = new Rectangle();
-        rect.setLength(10);
+        rect.setLength(0);
         rect.setBredth(20);
         System.out.println("The area of rectangle is: "+rect.area());
         System.out.println("Parameter of rectangle :"+rect.parameter());
