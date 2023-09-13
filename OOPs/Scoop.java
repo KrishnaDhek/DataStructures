@@ -49,11 +49,59 @@ class Product{
     }
 }
 
+class Customer{
+    private int custID;
+    private String Name;
+    private String Address;
+    private int Number;
+
+    public Customer(int id){
+        custID = id;
+    }
+    public Customer(int id, String name){
+        this.custID =id;
+        this.Name =name;
+    }
+    public Customer(int id, String name, String address, int num){
+        custID =id;
+        this.Name =name;
+        setAddress(address);
+        setNumber(num);
+    }
+    public String setAddress(String address){
+        return address;
+    }
+    public int setNumber(int num){
+        return num;
+    }
+    public String getName(){
+        return Name;
+    }
+    public int getcustID(){
+        return custID;
+    }
+    public String getAddress(){
+        return Address;
+    }
+    public int getNumber(){
+        return Number;
+    }
+    public String toString(){
+        return"CustID :"+custID+"\n"+"Name :"+Name+"\n"+"Address :"+Address+"\n"+"Phone Num. :"+Number;
+    }
+}
+
 public class Scoop {
     public static void main(String[] args) {
         Product p = new Product("AT1", "Sugar");
-        p.setprice(-62.0);
+        p.setprice(62.0);
+        System.out.println("Product Details :");
         System.out.println(p);
+        Customer c = new Customer(101, "Phill");
+        c.setAddress("A209,Power Tower,Pune");
+        c.setNumber(5085960);
+        System.out.println("Customer Details :");
+        System.out.println(c);
 
     }
 }
