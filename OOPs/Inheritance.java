@@ -20,10 +20,13 @@ class Circle{
             System.out.println("Radius cant be negative!");
         }
     }
-
-    public String toString(){
-        return "Radius of circle is :"+Radius;
+    public double area(){
+        return Math.PI*Radius*Radius;
     }
+    public String toString(){
+        return "Radius of circle is :"+Radius+"\n"+"Area of Circle is :"+area();
+    }
+    
 } 
 
 class Cylinder extends Circle{
@@ -46,8 +49,12 @@ class Cylinder extends Circle{
     public void setheight(double h){
        this.height = h;
     }
+
+    public double Volume(){
+        return Math.PI*getRadius()*height;
+    }
     public String toString(){
-        return "Radius of cylinder is :"+getRadius()+"\n"+"Height of cyclinder is :"+height;
+        return "Radius of cylinder is :"+getRadius()+"\n"+"Height of cyclinder is :"+height+"\n"+"Volume of Cylinder is :"+Volume();
     }
     
 }
