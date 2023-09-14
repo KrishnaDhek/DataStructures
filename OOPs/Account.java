@@ -5,6 +5,10 @@ class Bank{
 }
 
 class SevingsAccount{
+
+}
+
+class LoanAccount{
     
 }
 public class Account {
