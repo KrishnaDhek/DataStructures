@@ -10,6 +10,9 @@ class Bank{
 }
 
 class SevingsAccount{
+    private double Deposit;
+    private double Withdraw;
+    
 
 }
 
