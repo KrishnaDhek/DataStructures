@@ -47,7 +47,12 @@ class Cylinder extends Circle{
     }
 
     public void setheight(double h){
-       this.height = h;
+        if(h>0){
+            this.height = h;
+        }
+        else{
+            System.out.println("Height can not be negative !");
+        }
     }
 
     public double Volume(){
