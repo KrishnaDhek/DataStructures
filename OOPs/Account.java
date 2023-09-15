@@ -50,7 +50,25 @@ class BankAccount{
 }
 
 class SavingsAccount extends BankAccount{
-    
+    public SavingsAccount(int ac, boolean al,String n, String ad, String p){
+        super(ac, al, n, ad, p);
+    }
+    public void deposit(int a){
+        if(a>0){
+            setBalance(getBalance()+a);
+        }
+        else{
+            System.out.println("Deposit amount should be positive");
+        }
+    }
+    public void withdraw(int a){
+        if(a>0 && a<=getBalance()){
+            setBalance(getBalance()-a);
+        }else{
+            System.out.println("Invalid Withdrawl Amount");
+        }
+    }
+
 
 }
 
