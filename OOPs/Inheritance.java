@@ -36,15 +36,16 @@ class Cylinder extends Circle{
         super();
 
     }
-    public Cylinder(int r, double h){
-        super(r);
-        setheight(h);
-    }
-    
     public Cylinder(Circle c){
         super(c.getRadius());
 
     }
+    public Cylinder( double h){
+        
+        setheight(h);
+    }
+    
+    
 
     public void setheight(double h){
         if(h>0){
@@ -67,9 +68,11 @@ public class Inheritance {
     public static void main(String[] args) {
         Circle c = new Circle();
         c.setRadius(9);
+        System.out.println("+++++++Details of Circle++++++");
         System.out.println(c);
         Cylinder cy = new Cylinder(c);
         cy.setheight(2.1);
+        System.out.println("**********Details of Cylinder*********");
         System.out.println(cy);
     }
     
