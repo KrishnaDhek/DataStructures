@@ -1,25 +1,66 @@
 package OOPs;
 
-class Bank{
+class BankAccount{
     private int AccountNum;
     private boolean Close;
     private String Name;
     private String Address;
-    private int Phone;
+    private String Phone;
     private double Balance;
+
+    public BankAccount(int ac, boolean cl, String n, String ad, String p){
+        this.AccountNum = ac;
+        this.Close = cl;
+        this.Name = n;
+        this.Address = ad;
+        this.Phone = p;
+        this.Balance =0.0;
+    }
+
+    public int getAccountNum(){ 
+        return AccountNum;
+    }
+
+    public boolean getClose(){
+        return Close;
+    }
+    public String getName(){
+        return Name;
+    }
+    public String getAddress( ){
+        return Address;
+    }
+    public String getPhone(){
+        return Phone;
+    }
+
+    public double getBalance(){
+        return Balance;
+    }
+
+    public void setBalance(double b){
+        this.Balance =b;
+    }
+    public void setAddress(String A){
+         this.Address = A;
+    }
+    public void setPhone(String p){
+        this.Phone = p;
+    }
 }
 
-class SavingsAccount extends Account{
-    public double Deposit;
-    public double Withdraw;
-
+class SavingsAccount extends BankAccount{
+    
 
 }
 
-class LoanAccount extends Account{
+class LoanAccount extends BankAccount{
     public double payEMI;
     
 }
 public class Account {
+    public static void main(String[] args) {
+        
+    }
     
 }
