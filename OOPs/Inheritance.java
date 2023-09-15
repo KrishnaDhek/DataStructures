@@ -40,8 +40,8 @@ class Cylinder extends Circle{
         super(c.getRadius());
 
     }
-    public Cylinder( double h){
-        
+    public Cylinder(int r, double h){
+        super(r);
         setheight(h);
     }
     
@@ -57,7 +57,7 @@ class Cylinder extends Circle{
     }
 
     public double Volume(){
-        return Math.PI*getRadius()*height;
+        return Math.PI*getRadius()*getRadius()*height;
     }
     public String toString(){
         return "Radius of cylinder is :"+getRadius()+"\n"+"Height of cyclinder is :"+height+"\n"+"Volume of Cylinder is :"+Volume();
@@ -68,11 +68,11 @@ public class Inheritance {
     public static void main(String[] args) {
         Circle c = new Circle();
         c.setRadius(9);
-        System.out.println("+++++++Details of Circle++++++");
+        System.out.println("++++++++++++Details of Circle class+++++++++++");
         System.out.println(c);
         Cylinder cy = new Cylinder(c);
         cy.setheight(2.1);
-        System.out.println("**********Details of Cylinder*********");
+        System.out.println("***************Details of Cylinder class**************");
         System.out.println(cy);
     }
     
