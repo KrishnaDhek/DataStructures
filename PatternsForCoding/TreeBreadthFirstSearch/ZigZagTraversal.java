@@ -52,19 +52,21 @@ public class ZigZagTraversal{
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
+        TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
-        root.right = new TreeNode(4);
-        root.left.left = new TreeNode(5);
-        root.left.right = new TreeNode(6);
-        root.right.left = new TreeNode(7);
-        root.right.right = new TreeNode(8);
-        root.right.left.left = new TreeNode(9);
-        root.right.left.right = new TreeNode(10);        
-        List<List<Integer>> result = zigzagLevelOrder(root);
-        for (List<Integer> level : result) {
-            System.out.println(level);
-        }
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(9);
+        root.left.left.left= new TreeNode(7);
+        root.left.left.right =new TreeNode(8);
+        root.right.left.right = new TreeNode(10);
+
+        List<List<Integer>> list = zigzagLevelOrder(root);
+        System.out.println(list);
+
+    
     }
 }
 
