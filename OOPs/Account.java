@@ -9,15 +9,16 @@ class Bank{
     private double Balance;
 }
 
-class SavingsAccount{
-    private double Deposit;
-    private double Withdraw;
+class SavingsAccount extends Account{
+    public double Deposit;
+    public double Withdraw;
 
 
 }
 
-class LoanAccount{
-
+class LoanAccount extends Account{
+    public double payEMI;
+    
 }
 public class Account {
     
