@@ -72,7 +72,10 @@ class SavingsAccount extends BankAccount{
             System.out.println("Invalid Withdrawl Amount");
         }
     }
+    public String Details(){
+     return "AccNum :" +getAccountNum()+"\n"+"Status :"+(getClose() ? "Closed" : "Open")+"\n"+"Name :"+getName()+"\n"+"Address :"+getAddress()+"\n"+"Phone Num :"+getPhone()+"\n"+"Balance :"+getBalance();
 
+    }
 
 }
 
@@ -92,12 +95,18 @@ class LoanAccount extends BankAccount{
 }
 public class Account {
     public static void main(String[] args) {
+        System.out.println("-------Details of Bank Account------");
         BankAccount bankAccount = new BankAccount(2305, false, "Somi",null , null);
         bankAccount.setAddress("A219,KV Society Noida");
         bankAccount.setPhone("9983740438");
         bankAccount.setBalance(2348620);
         System.out.println(bankAccount.Details());
-        
+        SavingsAccount savingsAccount = new SavingsAccount(2305, false, "Somi",null , null);
+        savingsAccount.deposit(10980);
+        savingsAccount.withdraw(45680);
+         System.out.println("-------Details of Savings Account------");
+        System.out.println(savingsAccount.Details());
+
 
         
     }
