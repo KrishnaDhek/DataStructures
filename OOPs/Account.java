@@ -97,6 +97,7 @@ public class Account {
         bankAccount.setPhone("9983740438");
         bankAccount.setBalance(2348620);
         System.out.println(bankAccount.Details());
+        
 
         
     }
