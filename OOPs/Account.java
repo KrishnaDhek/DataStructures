@@ -73,7 +73,17 @@ class SavingsAccount extends BankAccount{
 }
 
 class LoanAccount extends BankAccount{
-    public double payEMI;
+    public LoanAccount(int a, boolean cl, String n, String ad, String p){
+        super(a, cl, n, ad, p);
+    }
+    public void payEMI(double a){
+        if(a>0){
+            setBalance(getBalance()-a);
+        }
+        else{
+            System.out.println("Invalid amount");
+        }
+    }
     
 }
 public class Account {
