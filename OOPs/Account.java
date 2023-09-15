@@ -109,6 +109,12 @@ public class Account {
         johnAccount.setPhone("98764432");
         johnAccount.setBalance(73629);
         accountList.add(johnAccount);
+
+        BankAccount tomAccount = new BankAccount(2308, false, "Tom", "Address2", "9983740439");
+        tomAccount.setAddress("4k09, Patel Sadan, Jammu");
+        tomAccount.setPhone("98764432");
+        tomAccount.setBalance(73629);
+        accountList.add(johnAccount);
         System.out.println("---------");
         for (BankAccount account : accountList) {
             System.out.println(account);
