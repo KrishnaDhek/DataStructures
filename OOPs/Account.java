@@ -1,5 +1,9 @@
 package OOPs;
 
+import java.util.HashMap;
+
+import java.util.ArrayList;
+
 class BankAccount{
     private int AccountNum;
     private boolean Close;
@@ -48,7 +52,7 @@ class BankAccount{
         this.Phone = p;
     }
 
-    public String Details(){
+    public String toString(){
         return "AccNum :" +AccountNum+"\n"+"Status :"+(Close ? "Closed" : "Open")+"\n"+"Name :"+Name+"\n"+"Address :"+Address+"\n"+"Phone Num :"+Phone+"\n"+"Balance :"+Balance;
     }
 }
@@ -72,10 +76,7 @@ class SavingsAccount extends BankAccount{
             System.out.println("Invalid Withdrawl Amount");
         }
     }
-    public String Details(){
-     return "AccNum :" +getAccountNum()+"\n"+"Status :"+(getClose() ? "Closed" : "Open")+"\n"+"Name :"+getName()+"\n"+"Address :"+getAddress()+"\n"+"Phone Num :"+getPhone()+"\n"+"Balance :"+getBalance();
-
-    }
+    
 
 }
 
@@ -95,19 +96,26 @@ class LoanAccount extends BankAccount{
 }
 public class Account {
     public static void main(String[] args) {
-        System.out.println("-------Details of Bank Account------");
-        BankAccount bankAccount = new BankAccount(2305, false, "Somi",null , null);
-        bankAccount.setAddress("A219,KV Society Noida");
-        bankAccount.setPhone("9983740438");
-        bankAccount.setBalance(2348620);
-        System.out.println(bankAccount.Details());
-        SavingsAccount savingsAccount = new SavingsAccount(2305, false, "Somi",null , null);
-        savingsAccount.deposit(10980);
-        savingsAccount.withdraw(45680);
-         System.out.println("---------Details of Savings Account--------");
-        System.out.println(savingsAccount.Details());
+        ArrayList<BankAccount> accountList = new ArrayList<>();  // Create an ArrayList to hold BankAccount objects
+
+        BankAccount somiAccount = new BankAccount(2305, false, "Somi", "Address1", "9983740438");
+        somiAccount.setAddress("A219, KV Society Noida");
+        somiAccount.setPhone("9983740438");
+        somiAccount.setBalance(2348620);
+        accountList.add(somiAccount);
+        
+        BankAccount johnAccount = new BankAccount(2306, false, "John", "Address2", "9983740439");
+        johnAccount.setAddress("4k09, Patel Sadan, Jammu");
+        johnAccount.setPhone("98764432");
+        johnAccount.setBalance(73629);
+        accountList.add(johnAccount);
+        System.out.println("---------");
+        for (BankAccount account : accountList) {
+            System.out.println(account);
+            System.out.println("----------");
 
 
+        }
         
     }
     
