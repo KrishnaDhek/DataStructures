@@ -104,7 +104,7 @@ public class Account {
         SavingsAccount savingsAccount = new SavingsAccount(2305, false, "Somi",null , null);
         savingsAccount.deposit(10980);
         savingsAccount.withdraw(45680);
-         System.out.println("-------Details of Savings Account------");
+         System.out.println("---------Details of Savings Account--------");
         System.out.println(savingsAccount.Details());
 
 
