@@ -47,6 +47,10 @@ class BankAccount{
     public void setPhone(String p){
         this.Phone = p;
     }
+
+    public String Details(){
+        return "AccNum :" +AccountNum+"\n"+"Status :"+(Close ? "Closed" : "Open")+"\n"+"Name :"+Name+"\n"+"Address :"+Address+"\n"+"Phone Num :"+Phone+"\n"+"Balance :"+Balance;
+    }
 }
 
 class SavingsAccount extends BankAccount{
@@ -88,6 +92,12 @@ class LoanAccount extends BankAccount{
 }
 public class Account {
     public static void main(String[] args) {
+        BankAccount bankAccount = new BankAccount(02305, false, "Somi",null , null);
+        bankAccount.setAddress("A219,KV Society Noida");
+        bankAccount.setPhone("9983740438");
+        bankAccount.setBalance(2348620);
+        System.out.println(bankAccount.Details());
+
         
     }
     
