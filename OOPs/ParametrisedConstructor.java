@@ -9,8 +9,8 @@ class Animal{
             case "mammal":
             System.out.println("Animal belongs to mammal category");
             break;
-            case "ambhibian":
-            System.out.println("Animal belongs to ambhinian category");
+            case "amphibian":
+            System.out.println("Animal belongs to amphibian category");
             break;
             default:
             System.out.println("Animal category un-known");
@@ -21,8 +21,14 @@ class Animal{
 
 }
 
-
+class Dog extends Animal{
+    public Dog(String type){
+        super(type); 
+    }
+}
 
 public class ParametrisedConstructor {
-    
+    public static void main(String[] args) {
+        
+    }
 }
