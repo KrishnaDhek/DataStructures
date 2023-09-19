@@ -15,6 +15,7 @@ public class MissingNumber {
             i++;
         }
        }
+       
        for(int j = 0; j<n; j++){
         if(num[j]!=j)
         return j;
@@ -28,7 +29,7 @@ public class MissingNumber {
        }
     
     public static void main(String[] args) {
-        int[] num = {0,2,5,1,8,9,7,3,4,6};
+        int[] num = {0,1,3};
         System.out.println("Missing number in the array "+missingNum(num));
     }
 }
