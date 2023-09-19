@@ -22,6 +22,9 @@ class Animal{
 }
 
 class Dog extends Animal{
+    public Dog(){
+        System.out.println("Dog is a type of aminal");
+    }
     public Dog(String type){
         super(type); 
     }
@@ -29,6 +32,7 @@ class Dog extends Animal{
 
 public class ParametrisedConstructor {
     public static void main(String[] args) {
+        Dog dog = new Dog("mammal");
         
     }
 }
