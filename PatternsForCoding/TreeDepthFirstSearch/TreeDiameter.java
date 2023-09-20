@@ -17,6 +17,9 @@ class TreeNode{
     }
 }
 public class TreeDiameter {
+    public static int depthOfTree(TreeNode root){
+        
+    }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
