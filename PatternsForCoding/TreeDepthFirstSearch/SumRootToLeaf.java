@@ -15,8 +15,14 @@ class TreeNode{
     }
 }
 public class SumRootToLeaf {
-    public static void main(String[] args) {
+    public static int sumNum(TreeNode root){
         
+    }
+    public static void main(String[] args) {
+        TreeNode leftChild = new TreeNode(1);
+        TreeNode rightChild = new TreeNode(2);
+        TreeNode root = new TreeNode(0,leftChild, rightChild);
+        System.out.println(sumNum(root));
     }
     
 }
