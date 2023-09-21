@@ -1,29 +1,51 @@
 package PatternsForCoding.TreeDepthFirstSearch;
-class TreeNode{
-    int value;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(){}
-    TreeNode(int value){
+import java.util.Stack;
+
+class TN{
+    int value;
+    TN left;
+    TN right;
+
+    TN(){}
+    TN(int value){
         this.value = value;
     }
-    TreeNode(int value, TreeNode left, TreeNode right){
+    TN(int value, TN left, TN right){
         this.value =  value;
         this.left = left;
          this.right = right;
     }
 }
 public class KthSmallestElementinaBST {
-    public static int kthSmallestEle(TreeNode root, int k){
-        
+    public static int kthSmallestEle(TN root, int k){
+        Stack<TN> stack = new Stack<>();
+
+        while(root!=null || !stack.isEmpty()){
+
+            while(root!=null){
+                stack.push(root);
+                root = root.left;
+            }
+
+            root = stack.pop();
+            k--;
+
+            if(k==0){
+                return root.value;
+            }
+
+            root = root.right;
+        }
+
+        return -1;
     }
     public static void main(String[] args) {
-        TreeNode root =new TreeNode(5);
-        root.left =new TreeNode(2);
-        root.left.right =new TreeNode(3);
-        root.right =new TreeNode(8);
-        root.right.left = new TreeNode(6);
+        TN root =new TN(5);
+        root.left =new TN(2);
+        root.left.right =new TN(3);
+        root.right =new TN(8);
+        root.right.left = new TN(6);
         System.out.println(kthSmallestEle(root, 4));
         
     }
