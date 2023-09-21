@@ -15,6 +15,9 @@ class TreeNode{
     }
 }
 public class KthSmallestElementinaBST {
+    public static int kthSmallestEle(TreeNode root, int k){
+        
+    }
     public static void main(String[] args) {
         TreeNode root =new TreeNode(5);
         root.left =new TreeNode(2);
