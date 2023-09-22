@@ -19,6 +19,9 @@ public class SumofUniqueElements {
             if(map.get(i)==1){
                 ans +=i;
             }
+            else if(map.get(i)==2){
+                ans -=i;
+            }
         }
 
     }
