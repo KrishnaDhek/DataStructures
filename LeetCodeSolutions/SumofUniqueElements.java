@@ -1,9 +1,15 @@
 package LeetCodeSolutions;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class SumofUniqueElements {
     public static int sumOfUnique(int[] n){
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int i : n){
+            if(map.containsKey())
+        }
 
     }
     public static void main(String[] args) {
