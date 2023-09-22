@@ -7,6 +7,7 @@ public class SumofUniqueElements {
         int[] n ={2,3,2,4,5,5,1,7};
 
         List<Integer> list = sumOfUnique(n);
+        System.out.println(list);
     }
     
 }
