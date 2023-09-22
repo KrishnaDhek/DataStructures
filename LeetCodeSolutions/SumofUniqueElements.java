@@ -23,6 +23,7 @@ public class SumofUniqueElements {
                 ans -=i;
             }
         }
+        return ans;
 
     }
     public static void main(String[] args) {
