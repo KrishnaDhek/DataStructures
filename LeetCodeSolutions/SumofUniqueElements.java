@@ -8,7 +8,12 @@ public class SumofUniqueElements {
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int i : n){
-            if(map.containsKey())
+            if(map.containsKey(i)){
+                map.put(i, map.get(i)+1);
+            }
+            else{
+                map.put(i, 1);
+            }
         }
 
     }
