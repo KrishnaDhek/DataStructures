@@ -6,6 +6,7 @@ import java.util.List;
 public class SumofUniqueElements {
     public static int sumOfUnique(int[] n){
         HashMap<Integer,Integer> map = new HashMap<>();
+        int ans =0;
 
         for(int i : n){
             if(map.containsKey(i)){
@@ -13,6 +14,10 @@ public class SumofUniqueElements {
             }
             else{
                 map.put(i, 1);
+            }
+
+            if(map.get(i)==1){
+                ans +=i;
             }
         }
 
