@@ -1,6 +1,9 @@
 package PatternsForCoding.Dynamicprogramming;
 
 public class Knapsack {
+    public static int knapSack(int[] val, int[] weight, int total){
+
+    }
     public static void main(String[] args) {
         int[] val = { 60, 100, 120 };
         int[] weight ={ 10, 20, 30 };
