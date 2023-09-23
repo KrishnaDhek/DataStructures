@@ -19,7 +19,19 @@ public class FrequencySort {
         PriorityQueue<Character> p = new PriorityQueue<>((a,b)-> map.get(b) - map.get(a));
 
         p.addAll(map.keySet());
-        
+
+        StringBuilder sb = new StringBuilder();
+
+        while(!p.isEmpty()){
+            char ch = p.poll();
+            int freq = map.get(ch);
+
+            for(int i=0; i<freq; i++){
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+
     }
     public static void main(String[] args) {
         String s = "teeth";
