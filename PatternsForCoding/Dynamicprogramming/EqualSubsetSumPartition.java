@@ -14,7 +14,17 @@ public class EqualSubsetSumPartition {
     }
 
     private static boolean subsetSum(int[] a, int s){
-        
+        boolean[] dp =  new boolean[s+1];
+
+        dp[0] =true;
+
+        for(int i: a){
+            for(int j= s; j>=i; j--){
+                dp[j] =dp[j] ||dp [j-i];
+            }
+        }
+
+        return dp[s];
     }
     public static void main(String[] args) {
         int[] nums ={1,5,11,5};
