@@ -8,6 +8,10 @@ class Node{
     }
 }
 public class MergeSortedList {
+
+    public static Node mergeList(Node l1, Node l2){
+        
+    }
     public static void main(String[] args) {
         Node head = new Node(1);
         head.next = new Node(2);
