@@ -1,5 +1,8 @@
 package PatternsForCoding.TopKElements;
 
 public class FrequencySort {
-    
+    public static void main(String[] args) {
+        String s = "teeth";
+        System.out.println(frequencySort(s));
+    }
 }
