@@ -10,7 +10,11 @@ public class Main {
     s.Push(27);
     s.Push(78);
     s.Push(3);
-    s.Push(9);//stack is full
+    s.Push(9);
+    s.Push(10);
+    s.Push(34);
+    s.Push('a');//char value will be stored
+
     System.out.println("Popped element is :"+s.Pop());
     System.out.println("Peek element is :"+s.Peek());
     s.delete();
