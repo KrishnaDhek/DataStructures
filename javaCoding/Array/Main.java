@@ -2,7 +2,7 @@ package Array;
 
 public class Main {
    public static void main(String[] args) {
-    Stack s = new Stack(5);
+    Stack s = new Stack(10);
     System.out.println("Is stack empty ? "+ s.isEmpty());
     System.out.println("Is stack full ? "+ s.isFull());
     s.Push(1);
