@@ -15,7 +15,8 @@ class Sub extends Super{
 
 public class MethodOverriding {
     public static void main(String[] args) {
-        
+        Super su = new Sub();
+        su.display();
         
     }
     
