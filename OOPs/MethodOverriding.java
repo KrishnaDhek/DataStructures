@@ -6,7 +6,17 @@ class Super{
     }
 }
 
+class Sub extends Super{
+    @Override
+    public void display(){
+        System.out.println("Sub-Class method");
+    }
+}
 
 public class MethodOverriding {
+    public static void main(String[] args) {
+        
+        
+    }
     
 }
