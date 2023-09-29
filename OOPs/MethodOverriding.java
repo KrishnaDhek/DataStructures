@@ -15,6 +15,8 @@ class Sub extends Super{
 
 public class MethodOverriding {
     public static void main(String[] args) {
+        //with the feature of Dynamic method dispath, method executed Based on the object, not on
+        // the type of reference it refers  
         Super su = new Sub();
         su.display();
         
