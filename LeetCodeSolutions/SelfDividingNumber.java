@@ -33,8 +33,8 @@ public class SelfDividingNumber {
         return true;
     }
     public static void main(String[] args) {
-        int left =1;
-        int right =22;
+        int left =18;
+        int right =88;
          List<Integer> list = selfDividingNumber(left,right);
          System.out.println(list);
     }
