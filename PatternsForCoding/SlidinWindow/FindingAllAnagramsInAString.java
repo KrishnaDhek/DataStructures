@@ -48,7 +48,7 @@ public class FindingAllAnagramsInAString {
     }
     public static void main(String[] args) {
         String s = "cbaebabacd";
-        String p = "abc";
+        String p = "c";
         // List<Integer> list = findAnagrams(s, p);
         System.out.println(findAnagrams(s, p));
     }
