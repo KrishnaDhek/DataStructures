@@ -1,34 +1,42 @@
 package OOPs;
 class SuperClass{
-    public static void meth1(){
+    public  void meth1(){ // Dynamic method concept works on instance method(non-static)
         System.out.println("Method 1 of superClass");
     }
 
-    public static void meth2(){
+    public  void meth2(){
         System.out.println("Method 2 of superClass");
     }
 
-    public static void meth3(){
+    public  void meth3(){
         System.out.println("Method 3 of supeClass");
     }
 }
 class SubClass extends SuperClass{
-    public static void meth1(){
+    public  void meth1(){
         System.out.println("Method 1 of subClass");
     }
 
-    public static void meth2(){
+    public  void meth2(){
         System.out.println("Method 2 of subClass");
     }
 
-    public static void meth3(){
+    public  void meth3(){
         System.out.println("Method 3 of subClass");
     }
 
-    public static void meth4(){
+    public  void meth4(){
         System.out.println("Method 3 of subClass");
     }
 }
 public class DynamicMethodDispatch {
+    public static void main(String[] args) {
+        SuperClass sup = new SubClass();
+        sup.meth1();
+        sup.meth2();
+        sup.meth3();
+        // sup.meth4();  this will cause error as super class does not contain amy method 4
+
+    }
     
 }
