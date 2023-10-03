@@ -31,7 +31,9 @@ class SubClass extends SuperClass{
 }
 public class DynamicMethodDispatch {
     public static void main(String[] args) {
-        SuperClass sup = new SubClass();
+        SuperClass sup = new SubClass();// dynamic method dispatch, allows JVM to resolve at 
+        // runtime which version of overriden method will be executed based on the actual type of object 
+        // and not its reference type
         sup.meth1();
         sup.meth2();
         sup.meth3();
