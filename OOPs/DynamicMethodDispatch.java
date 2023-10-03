@@ -37,7 +37,8 @@ public class DynamicMethodDispatch {
         sup.meth1();
         sup.meth2();
         sup.meth3();
-        // sup.meth4();  this will cause error as super class does not contain amy method 4
+        // sup.meth4();  this will cause error as the reference sup is of super class which 
+        // does not contain amy method 4
 
     }
     
