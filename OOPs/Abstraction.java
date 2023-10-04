@@ -21,5 +21,8 @@ class Rectangle extends Shape{
 
 }
 public class Abstraction {
-    
+    public static void main(String[] args) {
+        Shape s = new Rectangle(12.9, 34.5);
+        System.out.println("Area of Rectangle is");
+    }
 }
