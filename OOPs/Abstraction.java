@@ -1,7 +1,7 @@
 package OOPs;
 
-abstract class Shap{
-    
+abstract class Shape{
+
 }
 public class Abstraction {
     
