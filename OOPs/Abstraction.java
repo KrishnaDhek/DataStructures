@@ -9,8 +9,8 @@ class Rect extends SHP{
     private double bredth;
 
     Rect(double l, double b){
-        this.length = length;
-        this.bredth = bredth;
+        this.length = l;
+        this.bredth = b;
     }
 
     @Override
