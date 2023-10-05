@@ -60,6 +60,7 @@ public class PathSum {
         root.right.left = new NodeOfTree(13);
         root.right.right = new NodeOfTree(4);
         root.right.right.right =new NodeOfTree(1);
+        root.right = new NodeOfTree(8);
         int target = 26;
         System.out.println("Does tree has a path that is equal to the given sum from root-to-leaf ? " +hasPathSum(root, target ));
     }
