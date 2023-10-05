@@ -8,7 +8,7 @@ class Rect extends SHP{
     private double length;
     private double bredth;
 
-    Rect(double length, double bredth){
+    Rect(double l, double b){
         this.length = length;
         this.bredth = bredth;
     }
