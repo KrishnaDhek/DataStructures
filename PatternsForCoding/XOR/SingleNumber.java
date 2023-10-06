@@ -9,7 +9,7 @@ public class SingleNumber {
         return result;
     }
     public static void main(String[] args) {
-        int[] nums ={2,2,1,1,4,6,6,7,7,4,8};
+        int[] nums ={2,2,1,1,4,6,6,7,7,4,9,8,9};
         System.out.println(num(nums));
     }
 }
