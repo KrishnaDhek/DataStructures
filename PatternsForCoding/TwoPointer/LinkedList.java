@@ -88,6 +88,7 @@ class LinkedList{
         list.append(4);
         list.append(5);
         list.append(6);
+        list.append(9);
         list.createLoop(3);
         list.printList();
         list.detectLoop();
