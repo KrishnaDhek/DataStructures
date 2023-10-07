@@ -30,7 +30,7 @@ public class SqaureOfSortedArray {
 
     
     public static void main(String[] args) {
-        int[] nums = {-4,-1,0,3,10};
+        int[] nums = {-4,-1,0,3,10,-9};
        int[] result= SqaureOfSortedArray(nums);
        for(int i :result){
         System.out.print(i +" ");
