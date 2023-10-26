@@ -24,10 +24,10 @@ class Sample extends Test{
 }
 public class Interface {
     public static void main(String[] args) {
-       Sample s = new Sample();
-       s.meth1();
-       s.meth2();
-       s.meth3();
+       Interf i = new Sample();
+       i.meth1();
+       i.meth2();
+    //    i.meth3(); beacuse method 3 is not declared inside the interface interf
 
     }
     
