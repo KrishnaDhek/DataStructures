@@ -28,7 +28,7 @@ interface Vehical {
 
     @Override
     public void stop(){
-        System.out.println("Bike has stoped");
+        System.out.println("Bike has stopped");
     }
 
     @Override
@@ -55,7 +55,7 @@ interface Vehical {
 
     @Override
     public void stop(){
-        System.out.println("Car has stoped");
+        System.out.println("Car has stopped");
     }
 
     @Override
