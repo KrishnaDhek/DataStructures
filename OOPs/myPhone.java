@@ -51,14 +51,14 @@ interface MusicPlayer{
 
 public class myPhone  {
     public static void main(String[] args) {
-        MusicPlayer sp = new SmartPhone();
+        Phone sp = new SmartPhone();
         // sp.Click();
         // sp.Record();
-        // sp.call();
-        // sp.sms();
+        sp.call();
+        sp.sms();
         // sp.videoCall();
-        sp.stop();
-        sp.play();
+        // sp.stop();
+        // sp.play();
     }
     
 }
