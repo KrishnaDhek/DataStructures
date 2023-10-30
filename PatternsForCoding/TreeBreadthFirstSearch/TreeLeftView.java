@@ -46,11 +46,12 @@ public class TreeLeftView {
     public static void main(String[] args) {
         tNode root = new tNode(1);
         root.left = new tNode(2);
-        root.left.right = new tNode(5);
         root.right = new tNode(3);
-        root.right.left = new tNode(4);
-        root.right.right =new tNode(6);
-        root.right.left.right = new tNode(7);
+        root.left.right = new tNode(4);
+        root.right.left = new tNode(5);
+        root.left.left= new tNode(6);
+        root.left.right.right = new tNode(7);
+        root.right.left.right = new tNode(8);
         List<Integer> list = leftView(root);
         System.out.println(list);
     }
