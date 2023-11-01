@@ -24,5 +24,12 @@ public class GenerateParentheses {
             generateParenthesisHelper(result, current + ")", open, close - 1);
         }
     }
-
+    public static void main(String[] args) {
+        GenerateParentheses generator = new GenerateParentheses();
+        int n = 3;
+        List<String> combinations = generator.generateParenthesis(n);
+        for (String combo : combinations) {
+            System.out.println(combo);
+        }
+    }
 }
