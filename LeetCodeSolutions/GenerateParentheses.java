@@ -10,4 +10,10 @@ public class GenerateParentheses {
         generateParenthesisHelper(result, "", n, n);
         return result;
     }
+
+    private void generateParenthesisHelper(List<String> result, String current, int open, int close) {
+        if (open == 0 && close == 0) {
+            result.add(current);
+            return;
+        }
 }
