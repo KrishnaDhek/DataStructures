@@ -16,4 +16,13 @@ public class GenerateParentheses {
             result.add(current);
             return;
         }
+
+        if (open > 0) {
+            generateParenthesisHelper(result, current + "(", open - 1, close);
+        }
+        if (close > open) {
+            generateParenthesisHelper(result, current + ")", open, close - 1);
+        }
+    }
+
 }
