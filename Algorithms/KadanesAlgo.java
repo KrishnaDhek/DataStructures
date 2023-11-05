@@ -19,7 +19,7 @@ public class KadanesAlgo {
 
     }
     public static void main(String[] args) {
-        int[] nums= {-2,-3,4,-1,-2,1,5,-3};
+        int[] nums= {5,4,-1,7,8};
         System.out.println(KadanesAlgo(nums));
     }
     
