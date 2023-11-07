@@ -1,6 +1,48 @@
 package Algorithms;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MergeSortRecursive {
+    public static void merge(int[] a, int low, int mid, int high){
+        // defined a temporary list
+        List<Integer> list = new ArrayList<>();
+
+        int left = low;
+        int right = mid+1;
+
+// we will add the elements to the list till left <=mid and right<=high
+        while (left<=mid && right<=high) {
+            // add elements from the left, if less then right
+            if(a[left]<=a[right]){
+                list.add(a[left]);
+                left++;
+            }
+            // else add elements from the right 
+            else{
+                list.add(a[right]);
+                right++;
+            }
+        }
+// if left half has still some element, directly copy them to list
+        while (left<=mid) {
+            list.add(a[left]);
+            left++;
+            
+        }
+// if right half has still some element, directly copy them to list
+
+        while (right<=high) {
+            list.add(a[right]);
+            right++;
+        }
+
+        // copy back to the original array
+        for(int i =low; i<=high; i++){
+            a[i] = list.get(i-low);
+        }
+    }
+
     public static void mergeSort(int[] a, int low, int high){
         // Base case: If low is greater than or equal to high, the array is already sorted.
         if(low>=high){
