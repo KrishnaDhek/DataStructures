@@ -25,6 +25,7 @@ public class BinaryHeap {
             return -1;
         }
         else{
+            System.out.println("Peek of heap is :");
             return arr[1];
         }
     }
