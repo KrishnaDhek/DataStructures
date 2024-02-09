@@ -1,5 +1,5 @@
 package Array;
-
+//stack
 public class Stack {
     int[] arrStack;
     int topOfStack;
