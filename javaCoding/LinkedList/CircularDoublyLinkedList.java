@@ -1,5 +1,5 @@
 package LinkedList;
-
+//circular linked list
 public class CircularDoublyLinkedList {
     DoublyNode head;
     DoublyNode tail;
