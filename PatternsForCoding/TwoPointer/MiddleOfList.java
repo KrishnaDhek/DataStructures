@@ -3,7 +3,7 @@
 // If there are two middle nodes, return the second middle node.
 
 package   PatternsForCoding.TwoPointer;
-class LinkedList{
+class LinkedList_1 {
     Node head;
     class Node{
         Node next;
@@ -46,7 +46,7 @@ class LinkedList{
 }
 class Main{
         public static void main(String[] args) {
-            LinkedList l = new LinkedList();
+            LinkedList_1 l = new LinkedList_1();
             l.push(1);
             l.push(2);
             l.push(3);

@@ -4,13 +4,13 @@ import java.util.HashMap;
 
 class NodeOfTree{
     int data;
-    NodeOfTree left;
-    NodeOfTree right;
+    NodeOfTree_1 left;
+    NodeOfTree_1 right;
     NodeOfTree(){}
     NodeOfTree(int val){
         this.data = val;
     }
-    NodeOfTree(int val, NodeOfTree left, NodeOfTree right){
+    NodeOfTree(int val, NodeOfTree_1 left, NodeOfTree_1 right){
         this.data = val;
         this.left = left;
         this.right = right;
@@ -18,14 +18,14 @@ class NodeOfTree{
 }
 
 public class PathSumIII {
-    public static int pathSum(NodeOfTree root, int target){
+    public static int pathSum(NodeOfTree_1 root, int target){
         HashMap<Integer,Integer> map= new HashMap<>();
         map.put(0, 1);
         return dfs(root, 0, target, map);
 
     }
 
-    public static int dfs(NodeOfTree root, int currSum, int target, HashMap<Integer,Integer> map){
+    public static int dfs(NodeOfTree_1 root, int currSum, int target, HashMap<Integer,Integer> map){
         if (root == null) {
             return 0;
         }
@@ -40,15 +40,15 @@ public class PathSumIII {
     }
     
     public static void main(String[] args) {
-        NodeOfTree root = new NodeOfTree(10);
-        root.left = new NodeOfTree(5);
-        root.left.left= new NodeOfTree(3);
-        root.left.right = new NodeOfTree(2);
-        root.left.left.left = new NodeOfTree(3);
-        root.left.left.right = new NodeOfTree(-2);
-        root.left.right.right = new NodeOfTree(1);
-        root.right = new NodeOfTree(-3);
-        root.right.right = new NodeOfTree(11);
+        NodeOfTree_1 root = new NodeOfTree_1(10);
+        root.left = new NodeOfTree_1(5);
+        root.left.left= new NodeOfTree_1(3);
+        root.left.right = new NodeOfTree_1(2);
+        root.left.left.left = new NodeOfTree_1(3);
+        root.left.left.right = new NodeOfTree_1(-2);
+        root.left.right.right = new NodeOfTree_1(1);
+        root.right = new NodeOfTree_1(-3);
+        root.right.right = new NodeOfTree_1(11);
         int target = 8;
         System.out.println(pathSum(root, 8));
     }

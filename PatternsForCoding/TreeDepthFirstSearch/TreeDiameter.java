@@ -1,15 +1,15 @@
 package PatternsForCoding.TreeDepthFirstSearch;
 
 
-class TreeNode{
+class TreeNode_5 {
     int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(){}
-    TreeNode(int val){
+    TreeNode_4 left;
+    TreeNode_4 right;
+    TreeNode_5(){}
+    TreeNode_5(int val){
         this.val =val;
     }
-    TreeNode(int val, TreeNode left, TreeNode right){
+    TreeNode_5(int val, TreeNode_4 left, TreeNode_4 right){
         this.val = val;
         this.left = left;
         this.right = right;
@@ -17,12 +17,12 @@ class TreeNode{
 }
 public class TreeDiameter {
     private static int dia = 0;
-    public static int depthOfTree(TreeNode root){
+    public static int depthOfTree(TreeNode_4 root){
         depth(root);
         return dia;
     }
 
-    private static int depth(TreeNode root){
+    private static int depth(TreeNode_4 root){
         if(root==null)
             return 0;
 
@@ -34,13 +34,13 @@ public class TreeDiameter {
         return Math.max(leftDepth, rightDepth)+1;
     }
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.left.left = new TreeNode(3);
-        root.left.right = new TreeNode(4);
-        root.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(8);
+        TreeNode_4 root = new TreeNode_4(1);
+        root.left = new TreeNode_4(2);
+        root.left.left = new TreeNode_4(3);
+        root.left.right = new TreeNode_4(4);
+        root.right = new TreeNode_4(5);
+        root.right.left = new TreeNode_4(6);
+        root.right.right = new TreeNode_4(8);
         System.out.println(depthOfTree(root));
     }
     

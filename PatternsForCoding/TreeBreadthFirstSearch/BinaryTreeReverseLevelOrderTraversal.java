@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Queue;
 import java.util.ArrayList;
 
-class TreeNode{
+class TreeNode_2 {
     int val;
-    TreeNode left;
-     TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNode_1 left;
+     TreeNode_1 right;
+      TreeNode_2() {}
+      TreeNode_2(int val) { this.val = val; }
+      TreeNode_2(int val, TreeNode_1 left, TreeNode_1 right) {
           this.val = val;
           this.left = left;
           this.right = right;
@@ -19,14 +19,14 @@ class TreeNode{
 }
 public class BinaryTreeReverseLevelOrderTraversal {
 
-    public static List<List<Integer>> ReverseLevelOrderTraversal(TreeNode root){
+    public static List<List<Integer>> ReverseLevelOrderTraversal(TreeNode_1 root){
         List<List<Integer>> result = new ArrayList<>();
         
         if (root == null) {
             return result;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode_1> queue = new LinkedList<>();
         queue.offer(root);
         
         while (!queue.isEmpty()) {
@@ -34,7 +34,7 @@ public class BinaryTreeReverseLevelOrderTraversal {
             List<Integer> currentLevel = new ArrayList<>();
             
             for (int i = 0; i < levelSize; i++) {
-                TreeNode currentNode = queue.poll();
+                TreeNode_1 currentNode = queue.poll();
                 currentLevel.add(currentNode.val);
                 
                 if (currentNode.left != null) {
@@ -55,7 +55,7 @@ public class BinaryTreeReverseLevelOrderTraversal {
 
     
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        TreeNode_1 root = new TreeNode_1(3, new TreeNode_1(9), new TreeNode_1(20, new TreeNode_1(15), new TreeNode_1(7)));
 
         List<List<Integer>> list = ReverseLevelOrderTraversal(root);
         for(List<Integer> l : list)
